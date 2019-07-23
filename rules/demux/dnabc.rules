@@ -1,0 +1,25 @@
+rule all_dnabc:
+    input:
+        TARGET_DNABC
+
+rule run_dnabc:
+    input:
+        R1 = config["all"]["MUX_DIR"] + "/Undetermined_S0_L001_R1_001.fastq.gz",
+        R2 = config["all"]["MUX_DIR"] + "/Undetermined_S0_L001_R2_001.fastq.gz",
+        barcodes = PROJECT_DIR + "/" + config["all"]["MAPPING"]
+    params:
+        mismatch = config["demux"]["MISMATCH"],
+        total_reads_fp = PROJECT_DIR + "/" +  config["demux"]["TOTAL_READS"],
+        manifest_fp = PROJECT_DIR + "/" + config["demux"]["MANIFEST"],
+        demux_dir = PROJECT_DIR + "/" + config["demux"]["DEMUX"]
+    output:
+        PROJECT_DIR + "/" + config["demux"]["DEMUX"] + "/{sample}_{direction}.fastq"
+    shell:
+        """
+        dnabc.py \
+        --output-dir {params.demux_dir} \
+        --mismatches {params.mismatch} \
+        --manifest-file {params.manifest_fp} \
+        --total-reads-file {params.total_reads_fp} \
+        {input.barcodes} {input.R1} {input.R2}
+        """

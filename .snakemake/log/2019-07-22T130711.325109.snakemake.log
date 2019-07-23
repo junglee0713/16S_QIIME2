@@ -1,0 +1,4 @@
+WildcardError in line 1 of /scr1/users/leej39/16S_QIIME2/rules/targets/targets.rules:
+No values given for wildcard 'sample'.
+  File "/scr1/users/leej39/16S_QIIME2/Snakefile", line 6, in <module>
+  File "/scr1/users/leej39/16S_QIIME2/rules/targets/targets.rules", line 1, in <module>

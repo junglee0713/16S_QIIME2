@@ -1,0 +1,1292 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 80
+Job counts:
+	count	jobs
+	1	all
+	80	run_dnabc
+	81
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.1_R2.fastq
+    jobid: 23
+    wildcards: sample=Sham.mouse.skin.lysate.1, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 23 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.2_R1.fastq
+    jobid: 14
+    wildcards: sample=Human.lymph.arm.skinswab.2, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 14 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.13_R2.fastq
+    jobid: 32
+    wildcards: sample=Human.lymph.arm.skinswab.13, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 32 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.7_R1.fastq
+    jobid: 40
+    wildcards: sample=Human.normal.arm.skinswab.7, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 40 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.10_R1.fastq
+    jobid: 28
+    wildcards: sample=Human.lymph.arm.skinswab.10, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 28 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab4_R1.fastq
+    jobid: 48
+    wildcards: sample=NegativeControlswab4, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 48 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab2_R2.fastq
+    jobid: 3
+    wildcards: sample=NegativeControlswab2, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 3 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.11_R1.fastq
+    jobid: 56
+    wildcards: sample=Human.normal.arm.skinswab.11, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 56 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.4_R2.fastq
+    jobid: 60
+    wildcards: sample=Sham.mouse.skin.lysate.4, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 60 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.2_R2.fastq
+    jobid: 44
+    wildcards: sample=Human.normal.arm.skinswab.2, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 44 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.12_R1.fastq
+    jobid: 6
+    wildcards: sample=Human.lymph.arm.skinswab.12, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 6 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.9_R1.fastq
+    jobid: 36
+    wildcards: sample=Human.normal.arm.skinswab.9, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 36 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab3_R1.fastq
+    jobid: 12
+    wildcards: sample=NegativeControlswab3, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 12 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.12_R1.fastq
+    jobid: 20
+    wildcards: sample=Human.normal.arm.skinswab.12, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 20 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.4_R1.fastq
+    jobid: 31
+    wildcards: sample=Human.lymph.arm.skinswab.4, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 31 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.13_R1.fastq
+    jobid: 70
+    wildcards: sample=Human.normal.arm.skinswab.13, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 70 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.5_R2.fastq
+    jobid: 76
+    wildcards: sample=Human.normal.arm.skinswab.5, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 76 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.10_R1.fastq
+    jobid: 5
+    wildcards: sample=Human.normal.arm.skinswab.10, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 5 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.6_R2.fastq
+    jobid: 22
+    wildcards: sample=Human.normal.arm.skinswab.6, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 22 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.1_R1.fastq
+    jobid: 63
+    wildcards: sample=Human.normal.arm.skinswab.1, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 63 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.6_R1.fastq
+    jobid: 74
+    wildcards: sample=Human.lymph.arm.skinswab.6, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 74 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.2_R2.fastq
+    jobid: 1
+    wildcards: sample=Sham.mouse.skin.lysate.2, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 1 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.1_R2.fastq
+    jobid: 68
+    wildcards: sample=Lymphedema.mouse.skin.lysate.1, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 68 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.2_R1.fastq
+    jobid: 8
+    wildcards: sample=Lymphedema.mouse.skin.lysate.2, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 8 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.5_R2.fastq
+    jobid: 29
+    wildcards: sample=Lymphedema.mouse.skin.lysate.5, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 29 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.5_R1.fastq
+    jobid: 35
+    wildcards: sample=Sham.mouse.skin.lysate.5, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 35 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.3_R1.fastq
+    jobid: 46
+    wildcards: sample=Sham.mouse.skin.lysate.3, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 46 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.1_R2.fastq
+    jobid: 50
+    wildcards: sample=Human.lymph.arm.skinswab.1, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 50 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.3_R1.fastq
+    jobid: 55
+    wildcards: sample=Human.lymph.arm.skinswab.3, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 55 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.4_R2.fastq
+    jobid: 67
+    wildcards: sample=Human.normal.arm.skinswab.4, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 67 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.7_R1.fastq
+    jobid: 25
+    wildcards: sample=Human.lymph.arm.skinswab.7, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 25 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.5_R2.fastq
+    jobid: 18
+    wildcards: sample=Human.lymph.arm.skinswab.5, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 18 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.3_R1.fastq
+    jobid: 78
+    wildcards: sample=Human.normal.arm.skinswab.3, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 78 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.4_R2.fastq
+    jobid: 11
+    wildcards: sample=Lymphedema.mouse.skin.lysate.4, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 11 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab1_R2.fastq
+    jobid: 33
+    wildcards: sample=NegativeControlswab1, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 33 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.9_R1.fastq
+    jobid: 27
+    wildcards: sample=Human.lymph.arm.skinswab.9, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 27 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.8_R1.fastq
+    jobid: 47
+    wildcards: sample=Human.lymph.arm.skinswab.8, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 47 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.8_R1.fastq
+    jobid: 54
+    wildcards: sample=Human.normal.arm.skinswab.8, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 54 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.11_R2.fastq
+    jobid: 26
+    wildcards: sample=Human.lymph.arm.skinswab.11, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 26 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab2_R1.fastq
+    jobid: 69
+    wildcards: sample=NegativeControlswab2, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 69 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.3_R2.fastq
+    jobid: 80
+    wildcards: sample=Lymphedema.mouse.skin.lysate.3, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 80 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.4_R1.fastq
+    jobid: 75
+    wildcards: sample=Human.normal.arm.skinswab.4, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 75 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.3_R2.fastq
+    jobid: 64
+    wildcards: sample=Human.normal.arm.skinswab.3, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 64 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.7_R2.fastq
+    jobid: 2
+    wildcards: sample=Human.lymph.arm.skinswab.7, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 2 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.5_R1.fastq
+    jobid: 66
+    wildcards: sample=Human.lymph.arm.skinswab.5, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 66 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab1_R1.fastq
+    jobid: 19
+    wildcards: sample=NegativeControlswab1, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 19 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.4_R1.fastq
+    jobid: 24
+    wildcards: sample=Lymphedema.mouse.skin.lysate.4, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 24 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.8_R2.fastq
+    jobid: 59
+    wildcards: sample=Human.normal.arm.skinswab.8, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 59 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.9_R2.fastq
+    jobid: 38
+    wildcards: sample=Human.lymph.arm.skinswab.9, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 38 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.11_R1.fastq
+    jobid: 9
+    wildcards: sample=Human.lymph.arm.skinswab.11, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 9 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.8_R2.fastq
+    jobid: 71
+    wildcards: sample=Human.lymph.arm.skinswab.8, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 71 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.6_R2.fastq
+    jobid: 7
+    wildcards: sample=Human.lymph.arm.skinswab.6, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 7 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.1_R2.fastq
+    jobid: 45
+    wildcards: sample=Human.normal.arm.skinswab.1, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 45 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.3_R1.fastq
+    jobid: 79
+    wildcards: sample=Lymphedema.mouse.skin.lysate.3, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 79 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.1_R1.fastq
+    jobid: 77
+    wildcards: sample=Lymphedema.mouse.skin.lysate.1, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 77 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.2_R1.fastq
+    jobid: 39
+    wildcards: sample=Sham.mouse.skin.lysate.2, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 39 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.1_R1.fastq
+    jobid: 30
+    wildcards: sample=Human.lymph.arm.skinswab.1, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 30 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.3_R2.fastq
+    jobid: 13
+    wildcards: sample=Sham.mouse.skin.lysate.3, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 13 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.2_R2.fastq
+    jobid: 43
+    wildcards: sample=Lymphedema.mouse.skin.lysate.2, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 43 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.5_R2.fastq
+    jobid: 37
+    wildcards: sample=Sham.mouse.skin.lysate.5, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 37 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.3_R2.fastq
+    jobid: 58
+    wildcards: sample=Human.lymph.arm.skinswab.3, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 58 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.5_R1.fastq
+    jobid: 61
+    wildcards: sample=Lymphedema.mouse.skin.lysate.5, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 61 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab3_R2.fastq
+    jobid: 72
+    wildcards: sample=NegativeControlswab3, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 72 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.12_R2.fastq
+    jobid: 21
+    wildcards: sample=Human.normal.arm.skinswab.12, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 21 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.13_R2.fastq
+    jobid: 42
+    wildcards: sample=Human.normal.arm.skinswab.13, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 42 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.5_R1.fastq
+    jobid: 57
+    wildcards: sample=Human.normal.arm.skinswab.5, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 57 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.4_R2.fastq
+    jobid: 73
+    wildcards: sample=Human.lymph.arm.skinswab.4, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 73 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.10_R2.fastq
+    jobid: 52
+    wildcards: sample=Human.normal.arm.skinswab.10, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 52 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.6_R1.fastq
+    jobid: 53
+    wildcards: sample=Human.normal.arm.skinswab.6, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 53 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.2_R2.fastq
+    jobid: 62
+    wildcards: sample=Human.lymph.arm.skinswab.2, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 62 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.7_R2.fastq
+    jobid: 16
+    wildcards: sample=Human.normal.arm.skinswab.7, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 16 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.11_R2.fastq
+    jobid: 17
+    wildcards: sample=Human.normal.arm.skinswab.11, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 17 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.13_R1.fastq
+    jobid: 41
+    wildcards: sample=Human.lymph.arm.skinswab.13, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 41 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab4_R2.fastq
+    jobid: 4
+    wildcards: sample=NegativeControlswab4, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 4 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.10_R2.fastq
+    jobid: 15
+    wildcards: sample=Human.lymph.arm.skinswab.10, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 15 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.1_R1.fastq
+    jobid: 49
+    wildcards: sample=Sham.mouse.skin.lysate.1, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 49 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.4_R1.fastq
+    jobid: 51
+    wildcards: sample=Sham.mouse.skin.lysate.4, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 51 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.2_R1.fastq
+    jobid: 34
+    wildcards: sample=Human.normal.arm.skinswab.2, direction=R1
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 34 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.9_R2.fastq
+    jobid: 65
+    wildcards: sample=Human.normal.arm.skinswab.9, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 65 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+
+rule run_dnabc:
+    input: /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz, /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz, /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.12_R2.fastq
+    jobid: 10
+    wildcards: sample=Human.lymph.arm.skinswab.12, direction=R2
+
+
+        dnabc.py         --output-dir /scr1/users/leej39/Mehrara/demultiplexed_fastq         --mismatches 0         --manifest-file /scr1/users/leej39/Mehrara/manifest.csv         --total-reads-file /scr1/users/leej39/Mehrara/total_read_counts.tsv         /scr1/users/leej39/Mehrara/Mehrara_Run_1_mapping_file.tsv /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R1_001.fastq.gz /mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001/Undetermined_S0_L001_R2_001.fastq.gz
+        
+Submitted job 10 with external jobid 'removed environment variable LD_GOLD from submit environment - it is considered a security issue'.
+Error in rule run_dnabc:
+    jobid: 23
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.1_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 32
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.13_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 40
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.7_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 28
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.10_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 48
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab4_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 3
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab2_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 60
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.4_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 44
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.2_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 6
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.12_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 36
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.9_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 12
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab3_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 20
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.12_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 31
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.4_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 5
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.10_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 63
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.1_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 74
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.6_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 29
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.5_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 35
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.5_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 50
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.1_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 1
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.2_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 68
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.1_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 8
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.2_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 55
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.3_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 14
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.2_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 56
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.11_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 70
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.13_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 76
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.5_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 22
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.6_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 25
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.7_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 78
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.3_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 11
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.4_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 33
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab1_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 18
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.5_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 27
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.9_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 47
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.8_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 69
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab2_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 75
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.4_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 66
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.5_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 19
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab1_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 24
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.4_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 46
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.3_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 26
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.11_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 80
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.3_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 64
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.3_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 2
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.7_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 59
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.8_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 39
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.2_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 30
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.1_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 13
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.3_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 67
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.4_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 54
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.8_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 38
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.9_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 9
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.11_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 53
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.6_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 62
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.2_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 43
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.2_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 58
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.3_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 61
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.5_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 45
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.1_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 49
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.1_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 77
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.1_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 37
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.5_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 21
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.12_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 42
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.13_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 57
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.5_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 71
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.8_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 7
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.6_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 79
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Lymphedema.mouse.skin.lysate.3_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 52
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.10_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 17
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.11_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 4
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab4_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 34
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.2_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 72
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/NegativeControlswab3_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 73
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.4_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 15
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.10_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 51
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Sham.mouse.skin.lysate.4_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 65
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.9_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 10
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.12_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 16
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.normal.arm.skinswab.7_R2.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Error in rule run_dnabc:
+    jobid: 41
+    output: /scr1/users/leej39/Mehrara/demultiplexed_fastq/Human.lymph.arm.skinswab.13_R1.fastq
+    cluster_jobid: removed environment variable LD_GOLD from submit environment - it is considered a security issue
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+mail -s 'An error occurred' junglee0713@gmail.com < /scr1/users/leej39/16S_QIIME2/.snakemake/log/2019-07-22T145424.677536.snakemake.log
+Complete log: /scr1/users/leej39/16S_QIIME2/.snakemake/log/2019-07-22T145424.677536.snakemake.log

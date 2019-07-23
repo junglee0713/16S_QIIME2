@@ -1,0 +1,4 @@
+WildcardError in line 19 of /scr1/users/leej39/16S_QIIME2/rules/demux/dnabc.rules:
+No values given for wildcard 'sample'.
+  File "/scr1/users/leej39/16S_QIIME2/Snakefile", line 11, in <module>
+  File "/scr1/users/leej39/16S_QIIME2/rules/demux/dnabc.rules", line 19, in <module>

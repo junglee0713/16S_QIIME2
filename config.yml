@@ -1,0 +1,13 @@
+map: "Mehrara_Run_1_mapping_file.tsv"
+
+all:
+    MUX_DIR: "/mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001"
+    MAPPING: "Mehrara_Run_1_mapping_file.tsv"
+    PROJECT_DIR: "/scr1/users/leej39/Mehrara"
+    ADMIN_EMAIL: "junglee0713@gmail.com"
+
+demux:
+    MISMATCH: 0
+    DEMUX: "demultiplexed_fastq"
+    TOTAL_READS: "total_read_counts.tsv"
+    MANIFEST: "manifest.csv"

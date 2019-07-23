@@ -1,0 +1,4 @@
+NameError in line 19 of /scr1/users/leej39/16S_QIIME2/rules/demux/dnabc.rules:
+name 'READ_DIRECTIONS' is not defined
+  File "/scr1/users/leej39/16S_QIIME2/Snakefile", line 14, in <module>
+  File "/scr1/users/leej39/16S_QIIME2/rules/demux/dnabc.rules", line 19, in <module>

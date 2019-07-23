@@ -5,15 +5,14 @@ rule all_dnabc:
 rule run_dnabc:
     input:
         R1 = config["all"]["MUX_DIR"] + "/Undetermined_S0_L001_R1_001.fastq.gz",
-        R2 = config["all"]["MUX_DIR"] + "/Undetermined_S0_L001_R2_001.fastq.gz",
-        barcodes = PROJECT_DIR + "/" + config["all"]["MAPPING"]
+        R2 = config["all"]["MUX_DIR"] + "/Undetermined_S0_L001_R2_001.fastq.gz"
     params:
+        demux_dir = PROJECT_DIR + "/" + config["demux"]["DEMUX"],
         mismatch = config["demux"]["MISMATCH"],
-        total_reads_fp = PROJECT_DIR + "/" +  config["demux"]["TOTAL_READS"],
         manifest_fp = PROJECT_DIR + "/" + config["demux"]["MANIFEST"],
-        demux_dir = PROJECT_DIR + "/" + config["demux"]["DEMUX"]
+        total_reads_fp = PROJECT_DIR + "/" +  config["demux"]["TOTAL_READS"]
     output:
-        PROJECT_DIR + "/" + config["demux"]["DEMUX"] + "/{sample}_{direction}.fastq"
+        expand(PROJECT_DIR + "/" + config["demux"]["DEMUX"] + "/{sample}_{direction}.fastq", sample = SAMPLE_IDS, direction = ["R1", "R2"])
     shell:
         """
         dnabc.py \
@@ -21,5 +20,5 @@ rule run_dnabc:
         --mismatches {params.mismatch} \
         --manifest-file {params.manifest_fp} \
         --total-reads-file {params.total_reads_fp} \
-        {input.barcodes} {input.R1} {input.R2}
+        {MAPPING_FP} {input.R1} {input.R2}
         """

@@ -1,5 +1,3 @@
-map: "Mehrara_Run_1_mapping_file.tsv"
-
 all:
     MUX_DIR: "/mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001"
     MAPPING: "Mehrara_Run_1_mapping_file.tsv"

@@ -4,10 +4,13 @@ import yaml
 from util_functions import *
 
 PROJECT_DIR = config["all"]["PROJECT_DIR"]
-SAMPLE_IDS = get_sample(PROJECT_DIR + "/" + config["all"]["MAPPING"])
+MAPPING_FP = PROJECT_DIR + "/" + config["all"]["MAPPING"]
+SAMPLE_IDS = get_sample(MAPPING_FP)
 
 include: "rules/targets/targets.rules"
 include: "rules/demux/dnabc.rules"
+
+workdir: PROJECT_DIR
 
 rule all:
     input: TARGET_ALL

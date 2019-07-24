@@ -1,4 +1,4 @@
-TARGET_DNABC = expand(PROJECT_DIR + "/" + config["demux"]["DEMUX"] + "/{sample}_{direction}.fastq", sample = SAMPLE_IDS, direction = ["R1", "R2"])
+TARGET_DNABC = expand(PROJECT_DIR + "/" + config["demux"]["DEMUX_GZ"] + "/{sample}_{direction}.fastq.gz", sample = SAMPLE_IDS, direction = ["R1", "R2"])
 
 TARGET_ALL = (
     TARGET_DNABC

@@ -7,5 +7,6 @@ all:
 demux:
     MISMATCH: 0
     DEMUX: "demultiplexed_fastq"
+    DEMUX_GZ: "demultiplexed_fastq_gz"
     TOTAL_READS: "total_read_counts.tsv"
     MANIFEST: "manifest.csv"

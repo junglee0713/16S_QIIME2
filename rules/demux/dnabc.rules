@@ -2,6 +2,19 @@ rule all_dnabc:
     input:
         TARGET_DNABC
 
+rule gzip_demux:
+    input:
+        PROJECT_DIR + "/" + config["demux"]["DEMUX"] + "/{sample}_{direction}.fastq"
+    params:
+        demux_gz_dir = PROJECT_DIR + "/" + config["demux"]["DEMUX_GZ"]
+    output:
+        PROJECT_DIR + "/" + config["demux"]["DEMUX_GZ"] + "/{sample}_{direction}.fastq.gz"
+    shell:
+        """
+        mkdir -p {params.demux_gz_dir}
+        gzip -c {input} > {output}
+        """
+
 rule run_dnabc:
     input:
         R1 = config["all"]["MUX_DIR"] + "/Undetermined_S0_L001_R1_001.fastq.gz",

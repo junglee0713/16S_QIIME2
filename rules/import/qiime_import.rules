@@ -1,0 +1,9 @@
+rule all_qiime_import:
+    input:
+        TARGET_QIIME_IMPORT
+
+rull get_demux_qzv:
+    input:
+        PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qza"
+    output:
+        PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qzv"

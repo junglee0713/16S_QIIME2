@@ -10,3 +10,6 @@ demux:
     DEMUX_GZ: "demultiplexed_fastq_gz"
     TOTAL_READS: "total_read_counts.tsv"
     MANIFEST: "manifest.csv"
+
+import:
+    QIIME: "QIIME_output"

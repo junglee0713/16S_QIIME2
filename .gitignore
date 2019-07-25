@@ -37,3 +37,8 @@ rsconnect/
 
 # Snakemake files
 .snakemake
+.Snakefile.swp
+
+# Files from unexpected exit
+.nfs*
+

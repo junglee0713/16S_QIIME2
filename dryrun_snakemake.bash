@@ -6,4 +6,5 @@ snakemake -j 80 \
 	--notemp \
 	-p \
 	-c \
-	"qsub -cwd -r n -V -l h_vmem={cluster.h_vmem} -l mem_free={cluster.mem_free} -pe smp {threads}" -n
+	"qsub -cwd -r n -V -l h_vmem={cluster.h_vmem} -l mem_free={cluster.mem_free} -pe smp {threads}" \
+    -n

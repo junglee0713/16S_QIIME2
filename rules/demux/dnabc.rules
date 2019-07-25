@@ -21,17 +21,17 @@ rule run_dnabc:
         R2 = config["all"]["MUX_DIR"] + "/Undetermined_S0_L001_R2_001.fastq.gz"
     params:
         demux_dir = PROJECT_DIR + "/" + config["demux"]["DEMUX"],
-        mismatch = config["demux"]["MISMATCH"],
-        manifest_fp = PROJECT_DIR + "/" + config["demux"]["MANIFEST"],
-        total_reads_fp = PROJECT_DIR + "/" +  config["demux"]["TOTAL_READS"]
+        mismatch = config["demux"]["MISMATCH"]
     output:
-        expand(PROJECT_DIR + "/" + config["demux"]["DEMUX"] + "/{sample}_{direction}.fastq", sample = SAMPLE_IDS, direction = ["R1", "R2"])
+        manifest_fp = PROJECT_DIR + "/" + config["demux"]["MANIFEST"],
+        total_reads_fp = PROJECT_DIR + "/" +  config["demux"]["TOTAL_READS"],
+        demux_fastq = expand(PROJECT_DIR + "/" + config["demux"]["DEMUX"] + "/{sample}_{direction}.fastq", sample = SAMPLE_IDS, direction = ["R1", "R2"])
     shell:
         """
         dnabc.py \
         --output-dir {params.demux_dir} \
         --mismatches {params.mismatch} \
-        --manifest-file {params.manifest_fp} \
-        --total-reads-file {params.total_reads_fp} \
+        --manifest-file {output.manifest_fp} \
+        --total-reads-file {output.total_reads_fp} \
         {MAPPING_FP} {input.R1} {input.R2}
         """

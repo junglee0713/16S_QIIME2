@@ -1,7 +1,10 @@
 TARGET_DNABC = expand(PROJECT_DIR + "/" + config["demux"]["DEMUX_GZ"] + "/{sample}_{direction}.fastq.gz", sample = SAMPLE_IDS, direction = ["R1", "R2"])
 
-TARGET_QIIME_IMPORT = PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qzv"
+TARGET_QIIME_IMPORT = [str(PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qzv")]
 
 TARGET_ALL = (
-    TARGET_DNABC
+    TARGET_DNABC +
+    TARGET_QIIME_IMPORT
 )
+
+TARGET_ALL = TARGET_QIIME_IMPORT

@@ -2,8 +2,28 @@ rule all_qiime_import:
     input:
         TARGET_QIIME_IMPORT
 
-rull get_demux_qzv:
+rule get_demux_qzv:
     input:
         PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qza"
     output:
         PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qzv"
+    shell:
+        """
+        qiime demux summarize \
+        --i-data {input} \
+        --o-visualization {output}    
+        """
+
+rule get_demux_qza:
+    input: 
+        PROJECT_DIR + "/" + config["demux"]["MANIFEST"]
+    output:
+        PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qza"
+    shell:
+        """
+        qiime tools import \
+        --type 'SampleData[PairedEndSequencesWithQuality]' \
+        --input-path {input} \
+        --output-path {output} \
+        --input-format PairedEndFastqManifestPhred33 
+        """

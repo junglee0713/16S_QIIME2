@@ -3,6 +3,5 @@ TARGET_DNABC = expand(PROJECT_DIR + "/" + config["demux"]["DEMUX_GZ"] + "/{sampl
 TARGET_QIIME_IMPORT = PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qzv"
 
 TARGET_ALL = (
-    TARGET_DNABC +
-    TARGET_QIIME_IMPORT
+    TARGET_DNABC
 )

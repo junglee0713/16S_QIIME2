@@ -1,0 +1,15 @@
+rule all_qiime_demux_stat:
+    input:
+        TARGET_DEMUX_STAT
+
+rule get_demux_stat:
+    input:
+        PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qzv"
+    output:
+        PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux_stat"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {output}
+        """

@@ -10,6 +10,7 @@ SAMPLE_IDS = get_sample(MAPPING_FP)
 include: "rules/targets/targets.rules"
 include: "rules/demux/dnabc.rules"
 include: "rules/import/qiime_import.rules"
+include: "rules/import/qiime_demux_stat.rules"
 
 workdir: PROJECT_DIR
 

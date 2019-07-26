@@ -28,6 +28,7 @@ rule run_dnabc:
         demux_fastq = expand(PROJECT_DIR + "/" + config["demux"]["DEMUX"] + "/{sample}_{direction}.fastq", sample = SAMPLE_IDS, direction = ["R1", "R2"])
     shell:
         """
+        touch {output.demux_fastq}
         dnabc.py \
         --output-dir {params.demux_dir} \
         --mismatches {params.mismatch} \

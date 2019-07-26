@@ -4,9 +4,9 @@ rule all_qiime_demux_stat:
 
 rule get_demux_stat:
     input:
-        PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qzv"
+        QIIME_OUTPUT_DIR + "/demux.qzv"
     output:
-        PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux_stat"
+        QIIME_OUTPUT_DIR + "/demux_stat"
     shell:
         """
         qiime tools export \

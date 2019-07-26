@@ -4,9 +4,9 @@ rule all_qiime_import:
 
 rule get_demux_qzv:
     input:
-        PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qza"
+        QIIME_OUTPUT_DIR + "/demux.qza"
     output:
-        PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qzv"
+        QIIME_OUTPUT_DIR + "/demux.qzv"
     shell:
         """
         qiime demux summarize \
@@ -18,7 +18,7 @@ rule get_demux_qza:
     input: 
         PROJECT_DIR + "/" + config["demux"]["MANIFEST"]
     output:
-        PROJECT_DIR + "/" + config["import"]["QIIME"] + "/demux.qza"
+        QIIME_OUTPUT_DIR + "/demux.qza"
     shell:
         """
         qiime tools import \

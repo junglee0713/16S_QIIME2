@@ -7,4 +7,4 @@ snakemake -j 80 \
 	-p \
 	-c \
 	"qsub -cwd -r n -V -l h_vmem={cluster.h_vmem} -l mem_free={cluster.mem_free} -pe smp {threads}" \
-    -n
+    --unlock

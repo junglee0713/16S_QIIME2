@@ -1,0 +1,53 @@
+rule all_dada2:
+    input:
+       TARGET_DENOISE
+
+rule biom_convert:
+    input: 
+        DADA2_denoise_dir + "/" + config["denoise"]["FEATURE_TABLE"] + "/feature-table.biom"
+    output:
+        DADA2_denoise_dir + "/" + config["denoise"]["FEATURE_TABLE"] + "/feature-table.tsv"
+    shell:
+        """
+        biom convert \
+        -i {input} \
+        -o {output} \
+        --to-tsv
+        """
+
+rule get_feature_table:
+    input:
+        DADA2_denoise_dir + "/table.qza"
+    params:
+        DADA2_denoise_dir + "/" + config["denoise"]["FEATURE_TABLE"]
+    output:
+        DADA2_denoise_dir + "/" + config["denoise"]["FEATURE_TABLE"] + "/feature-table.biom"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """
+
+rule run_dada2:
+    input:
+        QIIME_OUTPUT_DIR + "/demux.qza"
+    params:
+        n_threads = config["denoise"]["DADA2"]["n_threads"],
+    output:
+        feature_table = DADA2_denoise_dir + "/table.qza",
+        rep_seq = DADA2_denoise_dir + "/representative-seqs.qza",
+        stat = DADA2_denoise_dir + "/denoise_stats.qza"
+    shell:
+        """
+        qiime dada2 denoise-paired \
+        --i-demultiplexed-seqs {input} \
+        --p-trim-left-f {DADA2_trim_left_f} \
+        --p-trunc-len-f {DADA2_trunc_len_f} \
+        --p-trim-left-r {DADA2_trim_left_r} \
+        --p-trunc-len-r {DADA2_trunc_len_r} \
+        --p-n-threads {params.n_threads} \
+        --o-table {output.feature_table} \
+        --o-representative-sequences {output.rep_seq} \
+        --o-denoising-stats {output.stat}
+        """ 

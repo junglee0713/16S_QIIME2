@@ -1,7 +1,7 @@
 all:
-    MUX_DIR: "/mnt/isilon/microbiome/raw_data/190520_M03543_0158_000000000-CGCHB_L001"
-    MAPPING: "Mehrara_Run_1_mapping_file.tsv"
-    PROJECT_DIR: "/scr1/users/leej39/Mehrara"
+    MUX_DIR: "/scr1/users/leej39/mux_fake"
+    PROJECT_DIR: "/scr1/users/leej39/fake"
+    MAPPING: "Goldberg_Run_1_Habtezion_Run_5_Bjornsson_Run_1_mapping_file.tsv"
     ADMIN_EMAIL: "junglee0713@gmail.com"
 
 demux:
@@ -13,3 +13,14 @@ demux:
 
 import:
     QIIME: "QIIME_output"
+
+denoise:
+    DENOISE: "denoise"
+    FEATURE_TABLE: "feature_table"
+    DADA2:
+        trim_left_f: 0
+        trunc_len_f: 240
+        trim_left_r: 0
+        trunc_len_r: 240
+        n_threads: 1
+

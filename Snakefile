@@ -22,6 +22,7 @@ include: "rules/demux/dnabc.rules"
 include: "rules/import/qiime_import.rules"
 include: "rules/import/qiime_demux_stat.rules"
 include: "rules/denoise/dada2.rules"
+include: "rules/taxonomy/taxonomy.rules"
 
 workdir: PROJECT_DIR
 

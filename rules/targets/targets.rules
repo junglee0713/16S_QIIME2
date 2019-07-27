@@ -6,9 +6,12 @@ TARGET_DEMUX_STAT = [str(QIIME_OUTPUT_DIR + "/demux_stat")]
 
 TARGET_DENOISE = [str(DADA2_denoise_dir + "/" + config["denoise"]["FEATURE_TABLE"] + "/feature-table.tsv")]
 
+TARGET_TAXONOMY = [str(DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] + "/taxonomy.tsv")]
+
 TARGET_ALL = (
     TARGET_DNABC +
     TARGET_QIIME_IMPORT +
     TARGET_DEMUX_STAT +
-    TARGET_DENOISE
+    TARGET_DENOISE +
+    TARGET_TAXONOMY
 )

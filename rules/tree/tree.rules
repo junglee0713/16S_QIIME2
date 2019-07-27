@@ -1,0 +1,42 @@
+rule all_tree:
+    input: TARGET_TREE
+
+rule rooted_tree:
+    input: DADA2_denoise_dir + "/unrooted-tree.qza"
+    output: DADA2_denoise_dir + "/rooted-tree.qza"
+    shell:
+        """
+        qiime phylogeny midpoint-root \
+        --i-tree {input} \
+        --o-rooted-tree {output}
+        """
+        
+rule unrooted_tree:
+    input: DADA2_denoise_dir + "/masked-aligned-rep-seqs.qza"
+    output: DADA2_denoise_dir + "/unrooted-tree.qza"        
+    shell:
+        """
+        qiime phylogeny fasttree \
+        --i-alignment {input} \
+        --o-tree {output}
+        """
+
+rule mask:
+    input: DADA2_denoise_dir + "/aligned-rep-seqs.qza"
+    output: DADA2_denoise_dir + "/masked-aligned-rep-seqs.qza"
+    shell:
+        """
+        qiime alignment mask \
+        --i-alignment {input} \
+        --o-masked-alignment {output}
+        """
+
+rule alignment:
+    input: DADA2_denoise_dir + "/representative-seqs.qza"
+    output: DADA2_denoise_dir + "/aligned-rep-seqs.qza"
+    shell:
+        """
+        qiime alignment mafft \
+        --i-sequences {input} \
+        --o-alignment {output}
+        """

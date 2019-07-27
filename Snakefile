@@ -23,6 +23,7 @@ include: "rules/import/qiime_import.rules"
 include: "rules/import/qiime_demux_stat.rules"
 include: "rules/denoise/dada2.rules"
 include: "rules/taxonomy/taxonomy.rules"
+include: "rules/tree/tree.rules"
 
 workdir: PROJECT_DIR
 

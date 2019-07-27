@@ -1,0 +1,31 @@
+rule all_taxonomy:
+    input:
+        TARGET_TAXONOMY
+
+rule taxonomy_export:
+    input:
+        DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] + "/classification.qza"
+    params:
+        DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"]
+    output:
+        DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] + "/taxonomy.tsv"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """ 
+
+rule get_taxonomy:
+    input:
+        classifier = config["taxonomy"]["CLASSIFIER_FP"],
+        rep_seq = DADA2_denoise_dir + "/representative-seqs.qza"
+    output:
+        DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] + "/classification.qza"
+    shell:
+        """
+        qiime feature-classifier classify-sklearn \
+        --i-classifier {input.classifier} \
+        --i-reads {input.rep_seq} \
+        --o-classification {output}
+        """

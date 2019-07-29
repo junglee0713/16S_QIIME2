@@ -27,3 +27,7 @@ denoise:
 taxonomy:
     TAXONOMY: "taxonomy"
     CLASSIFIER_FP: "/home/leej39/16S_QIIME2/QIIME2_data/gg-13-8-99-nb-classifier.qza"            
+
+diversity:
+    sampling_depth: 30
+    core_metrics: "core-metrics"     

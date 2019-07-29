@@ -1,0 +1,136 @@
+rule all_diversity:
+    input: 
+        TARGET_DIVERSITY
+
+rule move_wu:
+    input:
+        CORE_METRIC_DIR + "/wu/distance-matrix.tsv"
+    params:
+        CORE_METRIC_DIR + "/wu"
+    output:
+        CORE_METRIC_DIR + "/wu.tsv"
+    shell:
+        """
+        mv {input} {output}
+        rmdir {params}
+        """
+
+rule wu_convert:
+    input:
+        CORE_METRIC_DIR + "/weighted_unifrac_distance_matrix.qza"
+    params:
+        CORE_METRIC_DIR + "/wu"
+    output:
+        CORE_METRIC_DIR + "/wu/distance-matrix.tsv"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """
+
+rule move_uu:
+    input:
+        CORE_METRIC_DIR + "/uu/distance-matrix.tsv"
+    params:
+        CORE_METRIC_DIR + "/uu"
+    output:
+        CORE_METRIC_DIR + "/uu.tsv"     
+    shell:
+        """
+        mv {input} {output}
+        rmdir {params}
+        """
+
+rule uu_convert:
+    input:
+        CORE_METRIC_DIR + "/unweighted_unifrac_distance_matrix.qza"
+    params:
+        CORE_METRIC_DIR + "/uu"
+    output:
+        CORE_METRIC_DIR + "/uu/distance-matrix.tsv"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """
+
+rule move_faith:
+    input: 
+        CORE_METRIC_DIR + "/faith/alpha-diversity.tsv"
+    params:
+        CORE_METRIC_DIR + "/faith"
+    output:
+        CORE_METRIC_DIR + "/faith_pd.tsv" 
+    shell:
+        """
+        mv {input} {output}
+        rmdir {params}
+        """
+
+rule faith_convert:
+    input:
+        CORE_METRIC_DIR + "/faith_pd_vector.qza"
+    params:
+        CORE_METRIC_DIR + "/faith"
+    output:
+        CORE_METRIC_DIR + "/faith/alpha-diversity.tsv"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """
+
+rule get_diversity:
+    input:
+        rooted_tree = DADA2_denoise_dir + "/rooted-tree.qza",
+        table = DADA2_denoise_dir + "/table.qza"
+    params:
+        sampling_depth = config["diversity"]["sampling_depth"],
+        outdir = CORE_METRIC_DIR
+    output:
+        rarefied_table = CORE_METRIC_DIR + "/rarefied_table.qza",
+        faith_pd_vector = CORE_METRIC_DIR + "/faith_pd_vector.qza",
+        observed_otus_vector = CORE_METRIC_DIR + "/observed_otus_vector.qza",
+        shannon_vector = CORE_METRIC_DIR + "/shannon_vector.qza",
+        evenness_vector = CORE_METRIC_DIR + "/evenness_vector.qza",
+        uu_dist_mat = CORE_METRIC_DIR + "/unweighted_unifrac_distance_matrix.qza",
+        wu_dist_mat = CORE_METRIC_DIR + "/weighted_unifrac_distance_matrix.qza",
+        ja_dist_mat = CORE_METRIC_DIR + "/jaccard_distance_matrix.qza",
+        bc_dist_mat = CORE_METRIC_DIR + "/bray_curtis_distance_matrix.qza",
+        uu_pcoa = CORE_METRIC_DIR + "/unweighted_unifrac_pcoa_results.qza",
+        wu_pcoa = CORE_METRIC_DIR + "/weighted_unifrac_pcoa_results.qza",
+        ja_pcoa = CORE_METRIC_DIR + "/jaccard_pcoa_results.qza",
+        bc_pcoa = CORE_METRIC_DIR + "/bray_curtis_pcoa_results.qza",
+        uu_emperor = CORE_METRIC_DIR + "/unweighted_unifrac_emperor.qzv",
+        wu_emperor = CORE_METRIC_DIR + "/weighted_unifrac_emperor.qzv",
+        ja_emperor = CORE_METRIC_DIR + "/jaccard_emperor.qzv",
+        bc_emperor = CORE_METRIC_DIR + "/bray_curtis_emperor.qzv"
+    shell:
+        """
+        qiime diversity core-metrics-phylogenetic \
+        --i-phylogeny {input.rooted_tree} \
+        --i-table {input.table} \
+        --p-sampling-depth {params.sampling_depth} \
+        --m-metadata-file {MAPPING_FP} \
+        --o-rarefied-table {output.rarefied_table} \
+        --o-faith-pd-vector {output.faith_pd_vector} \
+        --o-observed-otus-vector {output.observed_otus_vector} \
+        --o-shannon-vector {output.shannon_vector} \
+        --o-evenness-vector {output.evenness_vector} \
+        --o-unweighted-unifrac-distance-matrix {output.uu_dist_mat} \
+        --o-weighted-unifrac-distance-matrix {output.wu_dist_mat} \
+        --o-jaccard-distance-matrix {output.ja_dist_mat} \
+        --o-bray-curtis-distance-matrix {output.bc_dist_mat} \
+        --o-unweighted-unifrac-pcoa-results {output.uu_pcoa} \
+        --o-weighted-unifrac-pcoa-results {output.wu_pcoa} \
+        --o-jaccard-pcoa-results {output.ja_pcoa} \
+        --o-bray-curtis-pcoa-results {output.bc_pcoa} \
+        --o-unweighted-unifrac-emperor {output.uu_emperor} \
+        --o-weighted-unifrac-emperor {output.wu_emperor} \
+        --o-jaccard-emperor {output.ja_emperor} \
+        --o-bray-curtis-emperor {output.bc_emperor} 
+        """
+

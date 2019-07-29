@@ -16,6 +16,7 @@ DADA2_denoise_dir = (QIIME_OUTPUT_DIR + "/" + config["denoise"]["DENOISE"] +
                         "_fwd_" + str(DADA2_trim_left_f) + "-" + str(DADA2_trunc_len_f) +
                         "_rev_" + str(DADA2_trim_left_r) + "-" + str(DADA2_trunc_len_r)
                     )
+CORE_METRIC_DIR = DADA2_denoise_dir + "/" + config["diversity"]["core_metrics"]
 
 include: "rules/targets/targets.rules"
 include: "rules/demux/dnabc.rules"
@@ -24,6 +25,7 @@ include: "rules/import/qiime_demux_stat.rules"
 include: "rules/denoise/dada2.rules"
 include: "rules/taxonomy/taxonomy.rules"
 include: "rules/tree/tree.rules"
+include: "rules/diversity/diversity.rules"
 
 workdir: PROJECT_DIR
 

@@ -10,12 +10,17 @@ TARGET_TAXONOMY = [str(DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] 
 
 TARGET_TREE = [str(DADA2_denoise_dir + "/rooted-tree.qza")]
 
+TARGET_DIVERSITY = [str(CORE_METRIC_DIR + "/faith_pd.tsv"),
+                    str(CORE_METRIC_DIR + "/uu.tsv"),
+                    str(CORE_METRIC_DIR + "/wu.tsv")]
+
 TARGET_ALL = (
     TARGET_DNABC +
     TARGET_QIIME_IMPORT +
     TARGET_DEMUX_STAT +
     TARGET_DENOISE +
     TARGET_TAXONOMY +
-    TARGET_TREE 
+    TARGET_TREE +
+    TARGET_DIVERSITY
 )
 

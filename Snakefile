@@ -26,6 +26,7 @@ include: "rules/denoise/dada2.rules"
 include: "rules/taxonomy/taxonomy.rules"
 include: "rules/tree/tree.rules"
 include: "rules/diversity/diversity.rules"
+include: "rules/unassign/unassign.rules"
 
 workdir: PROJECT_DIR
 

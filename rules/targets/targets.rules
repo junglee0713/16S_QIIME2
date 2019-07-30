@@ -6,6 +6,8 @@ TARGET_DEMUX_STAT = [str(QIIME_OUTPUT_DIR + "/demux_stat")]
 
 TARGET_DENOISE = [str(DADA2_denoise_dir + "/" + config["denoise"]["FEATURE_TABLE"] + "/feature-table.tsv")]
 
+TARGET_REPSEQ = [str(DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/dna-sequences.fasta")]
+
 TARGET_TAXONOMY = [str(DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] + "/taxonomy.tsv")]
 
 TARGET_TREE = [str(DADA2_denoise_dir + "/rooted-tree.qza")]
@@ -19,6 +21,7 @@ TARGET_ALL = (
     TARGET_QIIME_IMPORT +
     TARGET_DEMUX_STAT +
     TARGET_DENOISE +
+    TARGET_REPSEQ +
     TARGET_TAXONOMY +
     TARGET_TREE +
     TARGET_DIVERSITY

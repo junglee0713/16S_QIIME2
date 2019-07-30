@@ -1,6 +1,17 @@
 rule all_dada2:
     input:
-       TARGET_DENOISE
+       TARGET_DENOISE + TARGET_REPSEQ
+
+rule rep_seq_fasta:
+    input: DADA2_denoise_dir + "/representative-seqs.qza"
+    params: DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"]
+    output: DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/dna-sequences.fasta"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """
 
 rule biom_convert:
     input: 

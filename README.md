@@ -7,13 +7,19 @@ We assume that the following software are installed:
 - dnabc (https://github.com/PennChopMicrobiomeProgram/dnabc)
 - unassigner (https://github.com/kylebittinger/unassigner)
 
-## input
-- Multiplexed R1/R2 read pairs
-- QIIME2 compatible mapping files
-  - Tab delimited
-  - First two columns should be `SampleID` (or `#SampleID`) and `BarcodeSequence`
+## Input
+To run the pipeline, we need
+- multiplexed R1/R2 read pairs (Undetermined_S0_L001_R1_001.fastq.gz, Undetermined_S0_L001_R2_001.fastq.gz), and
+- a QIIME2 compatible mapping file
+  - tab delimited
+  - first two columns should be `SampleID` (or `#SampleID`) and `BarcodeSequence`
 
-## demultiplex step
-- Multiplexed -> demultiplexed fastq(.gz) files
-- QIIME2 manifest file
+## Intermediate steps and correspondign input/output
+
+### demultiplexing
+#### input
+- multiplexed R1/R2 read pairs
+- a QIIME2 compatible mapping file
+#### output
 - Total read count summary
+- QIIME2 compatible manifest file

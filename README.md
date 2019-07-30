@@ -1,5 +1,11 @@
 # 16S_QIIME2
-Snakemake based 16S QIIME2 pipeline 
+This is a Snakemake based 16S QIIME2 pipeline.
+
+## Software requirement
+We assume that the following software are installed:
+- QIIME2 version 2019.4 (https://docs.qiime2.org/2019.4)
+- dnabc (https://github.com/PennChopMicrobiomeProgram/dnabc)
+- unassigner (https://github.com/kylebittinger/unassigner)
 
 ## input
 - Multiplexed R1/R2 read pairs

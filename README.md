@@ -65,5 +65,5 @@ To run the pipeline, we need
 ### Unassigner
 #### Input
 - Representative sequences (fasta)
-####
+#### Output
 - Unassigner output (tsv) for species level classification of representative sequences

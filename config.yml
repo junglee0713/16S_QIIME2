@@ -31,4 +31,9 @@ taxonomy:
 
 diversity:
     sampling_depth: 30
-    core_metrics: "core-metrics"     
+    core_metrics: "core-metrics"    
+
+unassign:
+    unassign_out: "unassigned"
+    unassigner_species_fp: "/home/leej39/16S_QIIME2/unassign_data/unassigner_species.fasta"
+

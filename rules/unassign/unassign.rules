@@ -1,0 +1,19 @@
+rule all_unassign:
+    input:
+        TARGET_UNASSIGN
+
+rule run_unassign:
+    input:
+        DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/dna-sequences.fasta"
+    params:
+        unassigner_species_fp = config["unassign"]["unassigner_species_fp"],
+        outdir = DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/" + config["unassign"]["unassign_out"]
+    output:
+        DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/" + config["unassign"]["unassign_out"] + "/unassigner_output.tsv"
+    shell:
+        """
+        unassign \
+        --type_strain_fasta {params.unassigner_species_fp} \
+        --output_dir {params.outdir} \
+        {input}
+        """

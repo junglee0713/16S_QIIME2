@@ -17,6 +17,7 @@ import:
 denoise:
     DENOISE: "denoise"
     FEATURE_TABLE: "feature_table"
+    REPSEQ : "representative_seq_fasta"
     DADA2:
         trim_left_f: 0
         trunc_len_f: 240

@@ -21,8 +21,8 @@ To run the pipeline, we need
 - QIIME2 compatible mapping file
 #### Output
 - Demultiplexed fastq(.gz) files
-- Total read count summary
-- QIIME2 compatible manifest file
+- Total read count summary (tsv)
+- QIIME2 compatible manifest file (csv)
 
 ### QIIME2 import
 #### Input
@@ -31,3 +31,39 @@ To run the pipeline, we need
 #### Output
 - QIIME2 PairedEndSequencesWithQuality artifact and corresponding visualization
 - QIIME2-generated demultiplexing stats
+
+### DADA2 denoise
+#### Input
+- QIIME2 PairedEndSequencesWithQuality artifact
+#### Output
+- Feature table (QIIME2 artifact, tsv)
+- Representative sequences (QIIME2 artifact, fasta)
+
+### Taxonomy classification
+#### Input
+- Representative sequences 
+#### Output
+- Taxonomy classification table (QIIME2 artifact, tsv) 
+
+### Tree building
+#### Input
+- Representative sequences 
+#### Output
+- Aligned sequence
+- Masked (aligned) sequence
+- Unrooted tree
+- Rooted tree
+
+### Diverity calculation
+#### Input
+- Rooted tree
+#### Output
+- Various QIIME2 diversity metric artifacts
+- Faith phylogenetid diversity vector (tsv)
+- Weighted/unweighted UniFrac distance matrices (tsv)
+
+### Unassigner
+#### Input
+- Representative sequences (fasta)
+####
+- Unassigner output (tsv) for species level classification of representative sequences

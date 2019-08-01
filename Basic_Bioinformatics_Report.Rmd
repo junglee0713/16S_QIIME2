@@ -1,0 +1,47 @@
+---
+title: "Basic Bioinformatics Report"
+author:
+    - "CHOP Microbiome Center"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+params:
+   rmd: "report.Rmd"
+output:
+  html_document:
+  highlight: tango
+  number_sections: no
+  theme: default
+  toc: yes
+  toc_depth: 3
+  toc_float:
+    collapsed: no
+    smooth_scroll: yes
+---
+
+```{r, echo = FALSE}
+### ================
+###   knitr setup
+### ================
+
+library(knitr)
+opts_chunk$set(
+  tidy = FALSE,
+  cache = FALSE,
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  dpi = 100,
+  fig.align = "center",
+  fig.width = 8,
+  fig.height = 8
+  )
+```
+
+```{r, message = FALSE}
+### ================
+###   R packages
+### ================
+
+library(tidyverse)
+library(vegan)
+library(pheatmap)
+```

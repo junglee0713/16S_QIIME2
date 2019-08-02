@@ -28,7 +28,7 @@ include: "rules/taxonomy/taxonomy.rules"
 include: "rules/tree/tree.rules"
 include: "rules/diversity/diversity.rules"
 include: "rules/unassign/unassign.rules"
-#include: "rules/report/report.rules"
+include: "rules/report/report.rules"
 
 workdir: PROJECT_DIR
 

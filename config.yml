@@ -39,4 +39,5 @@ unassign:
 
 report:
     report: "Basic_Bioinformatics_Report"
+    rmd: "/home/leej39/16S_QIIME2/Basic_Bioinformatics_Report.Rmd"
 

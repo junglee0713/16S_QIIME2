@@ -4,10 +4,9 @@ rule all_report:
 
 rule generate_report:
     input:
-        mapping_fp = MAPPING_FP,
-
-        
+        mapping_fp = MAPPING_FP
     output:
         DADA2_denoise_dir + "/" + config["report"]["report"] + "/Basic_Bioinformatics_Report.html"
     script:
+        str(config["report"]["rmd"]) 
 

@@ -3,8 +3,6 @@ title: "Basic Bioinformatics Report"
 author:
     - "CHOP Microbiome Center"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-params:
-   rmd: "report.Rmd"
 output:
   html_document:
   highlight: tango
@@ -42,6 +40,23 @@ opts_chunk$set(
 ### ================
 
 library(tidyverse)
-library(vegan)
-library(pheatmap)
+#library(vegan)
+#library(pheatmap)
 ```
+
+```{r}
+cars %>%
+    filter(speed > 6) %>%
+    filter(speed < 13)
+```
+
+```{r, fig.width = 4, fig.height = 4}
+ggplot(cars, aes(speed, dist)) +
+    geom_point() +
+    theme(aspect.ratio = 1)
+```
+
+Newline?  
+Newline?\
+Does it work?  
+Yes, it does!

@@ -18,7 +18,7 @@ TARGET_DIVERSITY = [str(CORE_METRIC_DIR + "/faith_pd.tsv"),
 
 TARGET_UNASSIGN = [str(DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/" + config["unassign"]["unassign_out"] + "/unassigner_output.tsv")]
 
-TARGET_REPORT = [str(DADA2_denoise_dir + "/" + config["report"]["report"] + "/Basic_Bioinformatics_Report.html")]
+TARGET_REPORT = [str(CORE_METRIC_DIR + "/" + config["report"]["report"] + "/Basic_Bioinformatics_Report.html")]
 
 TARGET_ALL = (
     TARGET_DNABC +
@@ -29,7 +29,6 @@ TARGET_ALL = (
     TARGET_TAXONOMY +
     TARGET_TREE +
     TARGET_DIVERSITY +
-    TARGET_UNASSIGN
+    TARGET_UNASSIGN +
+    TARGET_REPORT
 )
-
-TARGET_ALL = TARGET_REPORT

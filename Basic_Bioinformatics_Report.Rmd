@@ -40,8 +40,8 @@ opts_chunk$set(
 ### ================
 
 library(tidyverse)
-#library(vegan)
-#library(pheatmap)
+library(vegan)
+library(pheatmap)
 ```
 
 ```{r}

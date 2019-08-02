@@ -54,12 +54,12 @@ To run the pipeline, we need
 - Unrooted tree
 - Rooted tree
 
-### Diverity calculation
+### Diversity calculation
 #### Input
 - Rooted tree
 #### Output
 - Various QIIME2 diversity metric artifacts
-- Faith phylogenetid diversity vector (tsv)
+- Faith phylogenetic diversity vector (tsv)
 - Weighted/unweighted UniFrac distance matrices (tsv)
 
 ### Unassigner

@@ -46,6 +46,7 @@ library(vegan)
 library(ape)
 library(pheatmap)
 library(ggpubr)
+library(DT)
 ```
 
 ```{r}
@@ -307,7 +308,6 @@ g <- df %>%
 print(g)
 ```
 
-
 # Alpha diversity
 
 Alpha diversity was assessed by the expected number of observed OTUs (out of rarefying sample size of `r richness_subsample_size`), Shannon index, and Faith’s phylogenetic diversity.
@@ -410,7 +410,7 @@ __denoise_Read_Counts__: read counts after the denoising step in QIIME2 pipeline
 __QC_Read_Counts__: read counts after removing contamination (mitochondria, chloroplast, or Unassigned)
 
 ```{r}
-s %>% select(SampleID, demux_Read_Counts, denoise_Read_Counts, QC_Read_Counts) %>%
-  arrange(desc(QC_Read_Counts)) %>%
-  pander()
+ReadCounts <- s %>% select(SampleID, demux_Read_Counts, denoise_Read_Counts, QC_Read_Counts) %>%
+  arrange(desc(QC_Read_Counts))
+datatable(ReadCounts, fillContainer = FALSE, options = list(pageLength = 7))
 ```

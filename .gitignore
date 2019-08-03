@@ -35,11 +35,10 @@ vignettes/*.pdf
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 
+# Files from unexpected exit
+.nfs*
+
 # Snakemake files
 .snakemake
 .Snakefile.swp
 .snakemake/*
-
-# Files from unexpected exit
-.nfs*
-

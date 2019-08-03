@@ -1,6 +1,6 @@
 all:
-    MUX_DIR: "/scr1/users/leej39/mux_fake"
-    PROJECT_DIR: "/scr1/users/leej39/fake"
+    MUX_DIR: "/home/leej39/16S_QIIME2/test/multiplexed_fastq"
+    PROJECT_DIR: "/home/leej39/16S_QIIME2/test"
     MAPPING: "Goldberg_Run_1_Habtezion_Run_5_Bjornsson_Run_1_mapping_file.tsv"
     ADMIN_EMAIL: "junglee0713@gmail.com"
 
@@ -40,5 +40,6 @@ unassign:
 report:
     study_group_var: "Investigator"
     report: "Basic_Bioinformatics_Report"
-    rmd: "/home/leej39/16S_QIIME2/Basic_Bioinformatics_Report.Rmd"
+    rmd: "/home/leej39/16S_QIIME2/scripts/Basic_Bioinformatics_Report.Rmd"
+    R_helper: "/home/leej39/16S_QIIME2/scripts/helper_functions.R" 
 

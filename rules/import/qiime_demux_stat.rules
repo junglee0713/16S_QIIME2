@@ -6,10 +6,11 @@ rule get_demux_stat:
     input:
         QIIME_OUTPUT_DIR + "/demux.qzv"
     output:
-        QIIME_OUTPUT_DIR + "/demux_stat"
+        demux_stat_dir = QIIME_OUTPUT_DIR + "/demux_stat",
+        per_sample_count = QIIME_OUTPUT_DIR + "/demux_stat/per-sample-fastq-counts.csv"
     shell:
         """
         qiime tools export \
         --input-path {input} \
-        --output-path {output}
+        --output-path {output.demux_stat_dir}
         """

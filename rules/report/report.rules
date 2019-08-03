@@ -4,7 +4,11 @@ rule all_report:
 
 rule generate_report:
     input:
-        mapping_fp = MAPPING_FP
+        mapping_fp = MAPPING_FP,
+        demux_count_fp = QIIME_OUTPUT_DIR + "/demux_stat/per-sample-fastq-counts.csv",
+        feature_table_fp = DADA2_denoise_dir + "/" + config["denoise"]["FEATURE_TABLE"] + "/feature-table.tsv", 
+        taxo_assignment_fp = DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] + "/taxonomy.tsv",
+        faith_fp = CORE_METRIC_DIR + "/faith_pd.tsv"
     output:
         CORE_METRIC_DIR + "/" + config["report"]["report"] + "/Basic_Bioinformatics_Report.html"
     script:

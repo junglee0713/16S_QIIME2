@@ -38,6 +38,7 @@ unassign:
     unassigner_species_fp: "/home/leej39/16S_QIIME2/unassign_data/unassigner_species.fasta"
 
 report:
+    study_group_var: "Investigator"
     report: "Basic_Bioinformatics_Report"
     rmd: "/home/leej39/16S_QIIME2/Basic_Bioinformatics_Report.Rmd"
 

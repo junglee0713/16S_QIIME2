@@ -1,12 +1,12 @@
 import configparser
 import yaml
 
-from util_functions import get_sample
+from scripts import util_functions
 
 PROJECT_DIR = config["all"]["PROJECT_DIR"]
 QIIME_OUTPUT_DIR = PROJECT_DIR + "/" + config["import"]["QIIME"]
 MAPPING_FP = PROJECT_DIR + "/" + config["all"]["MAPPING"]
-SAMPLE_IDS = get_sample(MAPPING_FP)
+SAMPLE_IDS = util_functions.get_sample(MAPPING_FP)
 
 DADA2_trim_left_f = config["denoise"]["DADA2"]["trim_left_f"]
 DADA2_trunc_len_f = config["denoise"]["DADA2"]["trunc_len_f"]

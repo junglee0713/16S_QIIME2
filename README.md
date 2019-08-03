@@ -7,6 +7,10 @@ We assume that the following software are installed:
 - `dnabc` (https://github.com/PennChopMicrobiomeProgram/dnabc)
 - `unassigner` (https://github.com/kylebittinger/unassigner)
 
+To run the pipeline, activate the QIIME2 version 2019.4 envrionment by entering e.g.,
+`source activate qiime2-2019.4`
+(Make sure to install `dnabc` and `unassigner` in the QIIME2 version 2019.4 envrionment)
+
 ## Input
 To run the pipeline, we need
 - Multiplexed R1/R2 read pairs (Undetermined_S0_L001_R1_001.fastq.gz, Undetermined_S0_L001_R2_001.fastq.gz), and
@@ -67,3 +71,9 @@ To run the pipeline, we need
 - Representative sequences (fasta)
 #### Output
 - Unassigner output (tsv) for species level classification of representative sequences
+
+### Basic Bioinformatics Report
+#### Input
+- QIIME2 compatible mapping file and output from diversity calculation 
+#### Output
+- Basic Bioinformatics Report containging heatmap, relative proportion bar graph, alpha diversity plots, beta diversity plots, and per sample read counts in HTML format.

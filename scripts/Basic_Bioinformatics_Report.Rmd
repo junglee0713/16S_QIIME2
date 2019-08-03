@@ -233,6 +233,81 @@ grps <- study_group_var
 heat(s_Heat, summed_props, grps = grps, satu_limit = satu_limit, prop_cut = prop_cut)
 ```
 
+# Relative proportions and bar graph
+
+## Family level 
+
+```{r, fig.height = 3.5, fig.width = 10}
+a <- simplify_assignments(adf, rank2 = "Family")
+summed_counts <- rowsum(counts, a)
+order_counts <- summed_counts[, s$SampleID]
+res <- getPrevalentTaxa(order_counts, least_prevalence = 0.001, top_taxa_n = 10)
+
+agg_counts <- res$aggregated_counts
+agg_props <- sweep(agg_counts, 2, colSums(agg_counts), "/") %>%
+  as.data.frame() %>%
+  rownames_to_column("Taxa") %>%
+  mutate(Taxa = factor(Taxa, levels = c(res$top_taxa, "Other"))) %>%
+  arrange(Taxa)
+
+df <- agg_props %>%
+  gather(SampleID, Prop, -Taxa) %>%
+  spread(key = Taxa, value = Prop) 
+
+g <- df %>%
+  gather(key = Taxa, value = Prop, -SampleID) %>%
+  mutate(Taxa = factor(Taxa)) %>%
+  left_join(s, by = "SampleID") %>%
+  mutate(SampleID = factor(SampleID)) %>%
+  ggplot(aes(SampleID, Prop)) +
+  geom_bar(stat = "identity", aes(fill = Taxa), 
+           color = "black",
+           position = position_stack(reverse = F)) +
+  scale_fill_npg() +
+  theme(axis.text.x = element_text(size = 6, angle = 90, hjust = 1, vjust = 0.5)) +
+  theme(axis.title = element_blank()) +
+  facet_grid(.~get(study_group_var), scales = "free_x", space = "free") 
+
+print(g)
+```
+
+## Genus level 
+
+```{r, fig.height = 3.5, fig.width = 10}
+a <- simplify_assignments(adf, rank2 = "Genus")
+summed_counts <- rowsum(counts, a)
+order_counts <- summed_counts[, s$SampleID]
+res <- getPrevalentTaxa(order_counts, least_prevalence = 0.001, top_taxa_n = 10)
+
+agg_counts <- res$aggregated_counts
+agg_props <- sweep(agg_counts, 2, colSums(agg_counts), "/") %>%
+  as.data.frame() %>%
+  rownames_to_column("Taxa") %>%
+  mutate(Taxa = factor(Taxa, levels = c(res$top_taxa, "Other"))) %>%
+  arrange(Taxa)
+
+df <- agg_props %>%
+  gather(SampleID, Prop, -Taxa) %>%
+  spread(key = Taxa, value = Prop) 
+
+g <- df %>%
+  gather(key = Taxa, value = Prop, -SampleID) %>%
+  mutate(Taxa = factor(Taxa)) %>%
+  left_join(s, by = "SampleID") %>%
+  mutate(SampleID = factor(SampleID)) %>%
+  ggplot(aes(SampleID, Prop)) +
+  geom_bar(stat = "identity", aes(fill = Taxa), 
+           color = "black",
+           position = position_stack(reverse = F)) +
+  scale_fill_npg() +
+  theme(axis.text.x = element_text(size = 6, angle = 90, hjust = 1, vjust = 0.5)) +
+  theme(axis.title = element_blank()) +
+  facet_grid(.~get(study_group_var), scales = "free_x", space = "free") 
+
+print(g)
+```
+
+
 # Alpha diversity
 
 Alpha diversity was assessed by the expected number of observed OTUs (out of rarefying sample size of `r richness_subsample_size`), Shannon index, and Faith’s phylogenetic diversity.

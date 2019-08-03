@@ -18,7 +18,8 @@ To run the pipeline, we need
   - Tab delimited
   - The first two columns should be `SampleID` (or `#SampleID`) and `BarcodeSequence`
 
-## Intermediate steps and correspondign input/output
+## Intermediate steps and corresponding input/output
+
 ### Demultiplexing
 #### Input
 - Multiplexed R1/R2 read pairs

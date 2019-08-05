@@ -1,6 +1,6 @@
 all:
-    MUX_DIR: "/home/leej39/16S_QIIME2/test_done/multiplexed_fastq"
-    PROJECT_DIR: "/home/leej39/16S_QIIME2/test_done"
+    PROJECT_DIR: "/home/leej39/16S_QIIME2/test_live"    
+    MUX_DIR: "/home/leej39/16S_QIIME2/test_live/multiplexed_fastq"
     MAPPING: "Goldberg_Run_1_Habtezion_Run_5_Bjornsson_Run_1_mapping_file.tsv"
     ADMIN_EMAIL: "junglee0713@gmail.com"
 

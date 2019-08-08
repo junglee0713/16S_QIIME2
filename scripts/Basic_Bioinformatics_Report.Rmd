@@ -59,10 +59,10 @@ source(snakemake@config[["report"]][["R_helper"]])
 ### =====================
 
 ### minimum QC read count threshold
-min_reads <- 5
+min_reads <- snakemake@config[["report"]][["min_reads"]]
 
 ### rarefying subsample size 
-richness_subsample_size <- 20
+richness_subsample_size <- snakemake@config[["report"]][["richness_subsample_size"]]
 
 ### mapping file path
 mapping_file_fp <- snakemake@input[["mapping_fp"]]
@@ -209,8 +209,8 @@ s <- s[s$SampleID %in% common_sample_list, ]
 # Sample size
 
 ```{r}
-s_Table <- addmargins(table(s[, study_group_var], s$QC_read_call))
-pander(s_Table, caption = "Samples with sufficient read counts by study group")
+s_Table <- addmargins(table(s[, study_group_var], s$QC_read_call, useNA = "ifany"))
+pander(s_Table, caption = paste0("Samples with sufficient read counts (>", format(min_reads, big.mark = ",", scientific = F), ") by study group"))
 ```
 
 # Taxonomic heatmap
@@ -232,6 +232,14 @@ summed_cts <- rowsum(cts_Heat, a)
 summed_props <- sweep(summed_cts, 2, colSums(summed_cts), "/") 
 grps <- study_group_var
 heat(s_Heat, summed_props, grps = grps, satu_limit = satu_limit, prop_cut = prop_cut)
+```
+
+```{r}
+# from now on, exclude control samples
+s1 <- s
+s <- s1 %>%
+  filter(!is_control) %>%
+  droplevels()
 ```
 
 # Relative proportions and bar graph
@@ -310,7 +318,7 @@ print(g)
 
 # Alpha diversity
 
-Alpha diversity was assessed by the expected number of observed OTUs (out of rarefying sample size of `r richness_subsample_size`), Shannon index, and Faith’s phylogenetic diversity.
+Alpha diversity was assessed by the expected number of observed OTUs (out of rarefying sample size of `r format(richness_subsample_size, big.mark = ",", scientific = F)`), Shannon index, and Faith’s phylogenetic diversity.
 
 ```{r}
 s_Alpha <- s %>%
@@ -369,7 +377,7 @@ g_wu <- pcoa_plot +
   labs(color = NULL)
 
 ## Unweighted UniFrac
-s_Beta <- s 
+s_Beta <- s
 dist_fp <- uu_fp
 dist_name <- "Unweighted UniFrac distance"
   
@@ -410,7 +418,7 @@ __denoise_Read_Counts__: read counts after the denoising step in QIIME2 pipeline
 __QC_Read_Counts__: read counts after removing contamination (mitochondria, chloroplast, or Unassigned)
 
 ```{r}
-ReadCounts <- s %>% select(SampleID, demux_Read_Counts, denoise_Read_Counts, QC_Read_Counts) %>%
-  arrange(desc(QC_Read_Counts))
-datatable(ReadCounts, fillContainer = FALSE, options = list(pageLength = 7))
+ReadCounts <- s1 %>% select(SampleID, demux_Read_Counts, denoise_Read_Counts, QC_Read_Counts) %>%
+  arrange(QC_Read_Counts)
+datatable(ReadCounts, fillContainer = FALSE, options = list(pageLength = 10))
 ```

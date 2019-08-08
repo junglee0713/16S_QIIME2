@@ -85,8 +85,8 @@ rule faith_convert:
 
 rule get_diversity:
     input:
-        rooted_tree = DADA2_denoise_dir + "/rooted-tree.qza",
-        table = DADA2_denoise_dir + "/table.qza"
+        rooted_tree = DENOISE_DIR + "/rooted-tree.qza",
+        table = DENOISE_DIR + "/table.qza"
     params:
         sampling_depth = config["diversity"]["sampling_depth"],
         outdir = CORE_METRIC_DIR

@@ -1,24 +1,24 @@
-TARGET_DNABC = expand(PROJECT_DIR + "/" + config["demux"]["DEMUX_GZ"] + "/{sample}_{direction}.fastq.gz", sample = SAMPLE_IDS, direction = ["R1", "R2"])
+TARGET_DNABC = expand(PROJECT_DIR + "/demultiplexed_fastq_gz/{sample}_{direction}.fastq.gz", sample = SAMPLE_IDS, direction = ["R1", "R2"])
 
 TARGET_QIIME_IMPORT = [str(QIIME_OUTPUT_DIR + "/demux.qzv")]
 
 TARGET_DEMUX_STAT = [str(QIIME_OUTPUT_DIR + "/demux_stat")]
 
-TARGET_DENOISE = [str(DADA2_denoise_dir + "/" + config["denoise"]["FEATURE_TABLE"] + "/feature-table.tsv")]
+TARGET_DENOISE = [str(DENOISE_DIR + "/feature_table/feature-table.tsv")]
 
-TARGET_REPSEQ = [str(DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/dna-sequences.fasta")]
+TARGET_REPSEQ = [str(DENOISE_DIR + "/representative_seq_fasta/dna-sequences.fasta")]
 
-TARGET_TAXONOMY = [str(DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] + "/taxonomy.tsv")]
+TARGET_TAXONOMY = [str(DENOISE_DIR + "/taxonomy/taxonomy.tsv")]
 
-TARGET_TREE = [str(DADA2_denoise_dir + "/rooted-tree.qza")]
+TARGET_TREE = [str(DENOISE_DIR + "/rooted-tree.qza")]
 
 TARGET_DIVERSITY = [str(CORE_METRIC_DIR + "/faith_pd.tsv"),
                     str(CORE_METRIC_DIR + "/uu.tsv"),
                     str(CORE_METRIC_DIR + "/wu.tsv")]
 
-TARGET_UNASSIGN = [str(DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/" + config["unassign"]["unassign_out"] + "/unassigner_output.tsv")]
+TARGET_UNASSIGN = [str(DENOISE_DIR + "/representative_seq_fasta/unassigned/unassigner_output.tsv")]
 
-TARGET_REPORT = [str(CORE_METRIC_DIR + "/" + config["report"]["report"] + "/Basic_Bioinformatics_Report.html")]
+TARGET_REPORT = [str(CORE_METRIC_DIR + "/basic_bioinformatics_report/Basic_Bioinformatics_Report.html")]
 
 TARGET_ALL = (
     TARGET_DNABC +

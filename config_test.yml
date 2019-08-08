@@ -1,0 +1,31 @@
+all:
+    project_dir: "/home/leej39/16S_QIIME2/test"    
+    mux_dir: "/home/leej39/16S_QIIME2/test/multiplexed_fastq"
+    mapping: "Goldberg_Run_1_Habtezion_Run_5_Bjornsson_Run_1_mapping_file.tsv"
+    admin_email: "junglee0713@gmail.com"
+
+demux:
+    mismatch: 0
+
+denoise:
+    trim_left_f: 0
+    trunc_len_f: 240
+    trim_left_r: 0
+    trunc_len_r: 240
+    n_threads: 6
+
+taxonomy:
+    classifier_fp: "/home/leej39/16S_QIIME2/QIIME2_data/gg-13-8-99-nb-classifier.qza"            
+
+diversity:
+    sampling_depth: 30
+
+unassign:
+    unassigner_species_fp: "/home/leej39/16S_QIIME2/unassign_data/unassigner_species.fasta"
+
+report:
+    study_group_var: "Investigator"
+    min_reads: 5
+    richness_subsample_size: 20
+    rmd: "/home/leej39/16S_QIIME2/scripts/Basic_Bioinformatics_Report.Rmd"
+    R_helper: "/home/leej39/16S_QIIME2/scripts/helper_functions.R" 

@@ -18,6 +18,16 @@ To run the pipeline, we need
   - Tab delimited
   - The first two columns should be `SampleID` (or `#SampleID`) and `BarcodeSequence`
 
+## How to run
+- Create a project directory, e.g. `/home/leej39/16S_QIIME2/test` and put the mapping file, e.g. `Goldberg_Run_1_Habtezion_Run_5_Bjornsson_Run_1_mapping_file.tsv` in the project directory
+- Edit `config_test.yml` so that it suits your project. In particular,
+  - all:project: path to the project directory, e.g. `/home/leej39/16S_QIIME2/test`
+  - all:mux_dir: the direcotry containing multiplexed R1/R2 read pairs, e.g. `/home/leej39/16S_QIIME2/test/multiplexed_fastq` 
+  - all:mapping: the name of mapping file, e.g. `Goldberg_Run_1_Habtezion_Run_5_Bjornsson_Run_1_mapping_file.tsv` 
+- run e.g. `bash run_snakemake.bash path/to/config_test.yml`
+  - `bash dryrun_snakemake.bash path/to/config_test.yml` for dryrun
+  - `bash unlock_snakemake.bash path/to/config_test.yml` for unlocking
+  
 ## Intermediate steps and corresponding input/output
 
 ### Demultiplexing

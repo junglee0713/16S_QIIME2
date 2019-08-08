@@ -1,0 +1,64 @@
+rule all_dada2:
+    input:
+       TARGET_DENOISE + TARGET_REPSEQ
+
+rule rep_seq_fasta:
+    input: DENOISE_DIR + "/representative-seqs.qza"
+    params: DENOISE_DIR + "/representative_seq_fasta"
+    output: DENOISE_DIR + "/representative_seq_fasta/dna-sequences.fasta"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """
+
+rule biom_convert:
+    input: 
+        DENOISE_DIR + "/feature_table/feature-table.biom"
+    output:
+        DENOISE_DIR + "/feature_table/feature-table.tsv"
+    shell:
+        """
+        biom convert \
+        -i {input} \
+        -o {output} \
+        --to-tsv
+        """
+
+rule get_feature_table:
+    input:
+        DENOISE_DIR + "/table.qza"
+    params:
+        DENOISE_DIR + "/feature_table"
+    output:
+        DENOISE_DIR + "/feature_table/feature-table.biom"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """
+
+rule run_dada2:
+    input:
+        QIIME_OUTPUT_DIR + "/demux.qza"
+    params:
+        n_threads = config["denoise"]["n_threads"]
+    output:
+        feature_table = DENOISE_DIR + "/table.qza",
+        rep_seq = DENOISE_DIR + "/representative-seqs.qza",
+        stat = DENOISE_DIR + "/denoise_stats.qza"
+    shell:
+        """
+        qiime dada2 denoise-paired \
+        --i-demultiplexed-seqs {input} \
+        --p-trim-left-f {trim_left_f} \
+        --p-trunc-len-f {trunc_len_f} \
+        --p-trim-left-r {trim_left_r} \
+        --p-trunc-len-r {trunc_len_r} \
+        --p-n-threads {params.n_threads} \
+        --o-table {output.feature_table} \
+        --o-representative-sequences {output.rep_seq} \
+        --o-denoising-stats {output.stat}
+        """ 

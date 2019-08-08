@@ -16,7 +16,7 @@ rule get_demux_qzv:
 
 rule get_demux_qza:
     input: 
-        PROJECT_DIR + "/" + config["demux"]["MANIFEST"]
+        PROJECT_DIR + "/manifest.csv"
     output:
         QIIME_OUTPUT_DIR + "/demux.qza"
     shell:

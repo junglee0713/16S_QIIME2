@@ -4,12 +4,12 @@ rule all_unassign:
 
 rule run_unassign:
     input:
-        DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/dna-sequences.fasta"
+        DENOISE_DIR + "/representative_seq_fasta/dna-sequences.fasta"
     params:
         unassigner_species_fp = config["unassign"]["unassigner_species_fp"],
-        outdir = DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/" + config["unassign"]["unassign_out"]
+        outdir = DENOISE_DIR + "/representative_seq_fasta/unassigned"
     output:
-        DADA2_denoise_dir + "/" + config["denoise"]["REPSEQ"] + "/" + config["unassign"]["unassign_out"] + "/unassigner_output.tsv"
+        DENOISE_DIR + "/representative_seq_fasta/unassigned/unassigner_output.tsv"
     shell:
         """
         unassign \

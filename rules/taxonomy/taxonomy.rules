@@ -4,11 +4,11 @@ rule all_taxonomy:
 
 rule taxonomy_export:
     input:
-        DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] + "/classification.qza"
+        DENOISE_DIR + "/taxonomy/classification.qza"
     params:
-        DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"]
+        DENOISE_DIR + "/taxonomy"
     output:
-        DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] + "/taxonomy.tsv"
+        DENOISE_DIR + "/taxonomy/taxonomy.tsv"
     shell:
         """
         qiime tools export \
@@ -18,10 +18,10 @@ rule taxonomy_export:
 
 rule get_taxonomy:
     input:
-        classifier = config["taxonomy"]["CLASSIFIER_FP"],
-        rep_seq = DADA2_denoise_dir + "/representative-seqs.qza"
+        classifier = config["taxonomy"]["classifier_fp"],
+        rep_seq = DENOISE_DIR + "/representative-seqs.qza"
     output:
-        DADA2_denoise_dir + "/" + config["taxonomy"]["TAXONOMY"] + "/classification.qza"
+        DENOISE_DIR + "/taxonomy/classification.qza"
     shell:
         """
         qiime feature-classifier classify-sklearn \

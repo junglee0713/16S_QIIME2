@@ -566,6 +566,7 @@ heat <- function(s_Heat, props_Heat, grps, satu_limit = satu_limit, prop_cut = p
   s_Heat <- s_Heat %>%
     dplyr::select(SampleID, grps) %>%
     unique() %>%
+    arrange(SampleID) %>%
     arrange_(.dots = grps)
   
   anno <- s_Heat %>% select(-SampleID)

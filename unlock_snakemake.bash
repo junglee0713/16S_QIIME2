@@ -1,8 +1,18 @@
 #!/bin/bash
+set -xeuo pipefail
+
+if [ $# -ne 1 ]; then
+    echo "Usage: bash $0 PATH_TO_CONFIG"
+    exit 1
+fi
+
+CONFIG_FP=$1
+
 snakemake -j 80 \
-	--configfile config.yml \
+	--configfile ${CONFIG_FP} \
 	--cluster-config cluster.json \
 	-w 90 \
+    --keep-going \
 	--notemp \
 	-p \
 	-c \

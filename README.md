@@ -20,7 +20,7 @@ To run the pipeline, activate the QIIME2 version 2019.7 envrionment by entering 
 `source activate qiime2-2019.7`
 (Make sure to install `dnabc` and `unassigner` in the QIIME2 version 2019.7 envrionment)
 
-## Input for the pipeline
+## Required input files for the pipeline
 To run the pipeline, we need
 - Multiplexed R1/R2 read pairs (Undetermined_S0_L001_R1_001.fastq.gz, Undetermined_S0_L001_R2_001.fastq.gz), and
 - QIIME2 compatible mapping file

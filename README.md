@@ -29,14 +29,14 @@ To run the pipeline, we need
 
 ## How to run
 - Create a project directory, e.g. `/home/leej39/16S_QIIME2/test` and put the mapping file, e.g. `test_mapping_file.tsv` in the project directory
-- Edit `config_test.yml` so that it suits your project. In particular,
+- Edit `config.yml` so that it suits your project. In particular,
   - **all: project**: path to the project directory, e.g. `/home/leej39/16S_QIIME2/test`
   - **all: mux_dir**: the direcotry containing multiplexed R1/R2 read pairs, e.g. `/home/leej39/16S_QIIME2/test/multiplexed_fastq` 
   - **all: mapping**: the name of mapping file, e.g. `test_mapping_file.tsv`
-- To run the pipeline, activate the envrionment by entering `source activate qiime2-2019.7` and execute e.g.
+- To run the pipeline, activate the envrionment by entering `source activate qiime2-2019.7`, `cd` into `16S_QIIME2` and execute e.g.
 ```bash
 snakemake \
-    --configfile path/to/config_test.yml \
+    --configfile path/to/config.yml \
     --keep-going \
     --latency-wait 90 \
     --notemp \

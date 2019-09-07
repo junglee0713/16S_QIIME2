@@ -2,7 +2,7 @@
 This is a Snakemake based 16S QIIME2 pipeline.
 
 ## Installation
-To install, we assume you already have installed `Miniconda3` (https://docs.conda.io/en/latest/miniconda.html)
+To install, we assume you already have installed `Miniconda3 (4.7.10+)` (https://docs.conda.io/en/latest/miniconda.html)
 - Clone the repository:
 ```bash
 git clone https://github.com/junglee0713/16S_QIIME2.git

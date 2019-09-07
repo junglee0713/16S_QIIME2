@@ -16,7 +16,7 @@ conda env create -f environment.yml
   - `dnabc` (https://github.com/PennChopMicrobiomeProgram/dnabc)
   - `unassigner` (https://github.com/kylebittinger/unassigner)
 
-To run the pipeline, activate the envrionment (currently based on **QIIME2 2019.7**) by entering e.g.,
+To run the pipeline, activate the envrionment (currently based on **QIIME2 2019.7**) by entering
 `source activate qiime2-2019.7`
 (Make sure to install `dnabc` and `unassigner` in the `qiime2-2019.7` envrionment)
 
@@ -33,8 +33,7 @@ To run the pipeline, we need
   - **all: project**: path to the project directory, e.g. `/home/leej39/16S_QIIME2/test`
   - **all: mux_dir**: the direcotry containing multiplexed R1/R2 read pairs, e.g. `/home/leej39/16S_QIIME2/test/multiplexed_fastq` 
   - **all: mapping**: the name of mapping file, e.g. `test_mapping_file.tsv`
-- To run the pipeline, activate the envrionment by entering e.g.,
-`source activate qiime2-2019.7` and execute e.g.
+- To run the pipeline, activate the envrionment by entering `source activate qiime2-2019.7` and execute e.g.
 ```bash
 snakemake -j 100 \
     --configfile path/to/config_test.yml \

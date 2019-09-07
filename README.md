@@ -2,7 +2,7 @@
 This is a Snakemake based 16S QIIME2 pipeline.
 
 ## Installation
-To install, we assume you already have installed `miniconda` (https://docs.conda.io/en/latest/miniconda.html)
+To install, we assume you already have installed `Miniconda3` (https://docs.conda.io/en/latest/miniconda.html)
 - Clone the repository:
 ```bash
 git clone https://github.com/junglee0713/16S_QIIME2.git
@@ -13,8 +13,7 @@ cd 16S_QIIME2
 conda env create -f environment.yml
 ```
 
-Software requirement
-We assume that the following software are installed:
+The following software are installed:
 - `QIIME2 version 2019.7` (https://docs.qiime2.org/2019.7)
 - `dnabc` (https://github.com/PennChopMicrobiomeProgram/dnabc)
 - `unassigner` (https://github.com/kylebittinger/unassigner)

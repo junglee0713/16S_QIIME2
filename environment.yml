@@ -5,7 +5,6 @@ channels:
   - conda-forge
   - defaults
   - r
-  - eclarke
 dependencies:
   - _libgcc_mutex=0.1=main
   - _r-mutex=1.0.1=anacondar_1
@@ -502,9 +501,3 @@ dependencies:
   - zipp=0.5.1=py_0
   - zlib=1.2.11=h516909a_1005
   - zstd=1.4.0=h3b9ef0a_0
-  - pip:
-    - biopython==1.74
-    - dnabc==0.0.5
-    - unassigner==0.0.3
-prefix: /home/leej39/miniconda3/envs/qiime2-2019.7
-

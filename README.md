@@ -38,9 +38,9 @@ To run the pipeline, we need
 snakemake \
     --configfile path/to/config_test.yml \
     --keep-going \
-    -w 90 \
+    --latency-wait 90 \
     --notemp \
-    -p 
+    --printshellcmds
 ```
 - When submitting jobs using `qsub`, you may run e.g. `bash run_snakemake.bash path/to/config_test.yml`
   - `bash dryrun_snakemake.bash path/to/config_test.yml` for dryrun

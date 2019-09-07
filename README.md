@@ -20,7 +20,7 @@ To run the pipeline, activate the QIIME2 version 2019.7 envrionment by entering 
 `source activate qiime2-2019.7`
 (Make sure to install `dnabc` and `unassigner` in the QIIME2 version 2019.7 envrionment)
 
-## Input
+## Input for the pipeline
 To run the pipeline, we need
 - Multiplexed R1/R2 read pairs (Undetermined_S0_L001_R1_001.fastq.gz, Undetermined_S0_L001_R2_001.fastq.gz), and
 - QIIME2 compatible mapping file
@@ -33,7 +33,8 @@ To run the pipeline, we need
   - **all: project**: path to the project directory, e.g. `/home/leej39/16S_QIIME2/test`
   - **all: mux_dir**: the direcotry containing multiplexed R1/R2 read pairs, e.g. `/home/leej39/16S_QIIME2/test/multiplexed_fastq` 
   - **all: mapping**: the name of mapping file, e.g. `test_mapping_file.tsv`
-- To run the pipeline, execute e.g.
+- To run the pipeline, activate the QIIME2 version 2019.7 envrionment by entering e.g.,
+`source activate qiime2-2019.7` and execute e.g.
 ```bash
 snakemake -j 100 \
     --configfile path/to/config_test.yml \

@@ -5,12 +5,13 @@ rule all_qiime_demux_stat:
 rule get_demux_stat:
     input:
         QIIME_OUTPUT_DIR + "/demux.qzv"
+    params:
+        QIIME_OUTPUT_DIR + "/demux_stat"
     output:
-        demux_stat_dir = QIIME_OUTPUT_DIR + "/demux_stat",
         per_sample_count = QIIME_OUTPUT_DIR + "/demux_stat/per-sample-fastq-counts.csv"
     shell:
         """
         qiime tools export \
         --input-path {input} \
-        --output-path {output.demux_stat_dir}
+        --output-path {params}
         """

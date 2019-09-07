@@ -2,7 +2,7 @@ TARGET_DNABC = expand(PROJECT_DIR + "/demultiplexed_fastq_gz/{sample}_{direction
 
 TARGET_QIIME_IMPORT = [str(QIIME_OUTPUT_DIR + "/demux.qzv")]
 
-TARGET_DEMUX_STAT = [str(QIIME_OUTPUT_DIR + "/demux_stat")]
+TARGET_DEMUX_STAT = [str(QIIME_OUTPUT_DIR + "/demux_stat/per-sample-fastq-counts.csv")]
 
 TARGET_DENOISE = [str(DENOISE_DIR + "/feature_table/feature-table.tsv")]
 

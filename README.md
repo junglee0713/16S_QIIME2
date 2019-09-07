@@ -3,13 +3,13 @@ This is a Snakemake based 16S QIIME2 pipeline.
 
 ## Software requirement
 We assume that the following software are installed:
-- `QIIME2 version 2019.4` (https://docs.qiime2.org/2019.4)
+- `QIIME2 version 2019.7` (https://docs.qiime2.org/2019.7)
 - `dnabc` (https://github.com/PennChopMicrobiomeProgram/dnabc)
 - `unassigner` (https://github.com/kylebittinger/unassigner)
 
-To run the pipeline, activate the QIIME2 version 2019.4 envrionment by entering e.g.,
-`source activate qiime2-2019.4`
-(Make sure to install `dnabc` and `unassigner` in the QIIME2 version 2019.4 envrionment)
+To run the pipeline, activate the QIIME2 version 2019.7 envrionment by entering e.g.,
+`source activate qiime2-2019.7`
+(Make sure to install `dnabc` and `unassigner` in the QIIME2 version 2019.7 envrionment)
 
 ## Input
 To run the pipeline, we need

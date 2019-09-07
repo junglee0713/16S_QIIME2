@@ -42,3 +42,7 @@ rsconnect/
 .snakemake
 .Snakefile.swp
 .snakemake/*
+
+# Data that are too big
+test/demultiplexed_fastq_gz/
+test/demultiplexed_fastq/

@@ -1,7 +1,7 @@
 all:
     project_dir: "/home/leej39/16S_QIIME2/test"    
     mux_dir: "/home/leej39/16S_QIIME2/test/multiplexed_fastq"
-    mapping: "Goldberg_Run_1_Habtezion_Run_5_Bjornsson_Run_1_mapping_file.tsv"
+    mapping: "test_mapping_file.tsv"
     admin_email: "junglee0713@gmail.com"
 
 demux:

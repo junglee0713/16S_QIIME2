@@ -1,4 +1,0 @@
-NameError in line 1 of /scr1/users/leej39/16S_QIIME2/rules/targets/targets.rules:
-name 'SAMPLE_IDS' is not defined
-  File "/scr1/users/leej39/16S_QIIME2/Snakefile", line 13, in <module>
-  File "/scr1/users/leej39/16S_QIIME2/rules/targets/targets.rules", line 1, in <module>

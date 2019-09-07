@@ -1,4 +1,0 @@
-FileNotFoundError in line 11 of /scr1/users/leej39/16S_QIIME2/Snakefile:
-[Errno 2] No such file or directory: 'Mehrara_Run_1_mapping_file.tsv'
-  File "/scr1/users/leej39/16S_QIIME2/Snakefile", line 11, in <module>
-  File "/scr1/users/leej39/16S_QIIME2/util_functions.py", line 2, in get_sample

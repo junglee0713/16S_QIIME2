@@ -1,4 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 8 of /scr1/users/leej39/16S_QIIME2/rules/demux/dnabc.rules:
-Missing input files for rule run_dnabc:
-Mehrara_Run_1_mapping_file.tsv

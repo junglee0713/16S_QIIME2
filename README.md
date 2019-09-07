@@ -12,11 +12,9 @@ git clone https://github.com/junglee0713/16S_QIIME2.git
 cd 16S_QIIME2
 conda env create -f environment.yml
 ```
-
-The following software are installed:
-- `QIIME2 version 2019.7` (https://docs.qiime2.org/2019.7)
-- `dnabc` (https://github.com/PennChopMicrobiomeProgram/dnabc)
-- `unassigner` (https://github.com/kylebittinger/unassigner)
+- The following software also need to be installed:
+  - `dnabc` (https://github.com/PennChopMicrobiomeProgram/dnabc)
+  - `unassigner` (https://github.com/kylebittinger/unassigner)
 
 To run the pipeline, activate the QIIME2 version 2019.7 envrionment by entering e.g.,
 `source activate qiime2-2019.7`

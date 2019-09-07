@@ -32,7 +32,16 @@ To run the pipeline, we need
 - Edit `config_test.yml` so that it suits your project. In particular,
   - **all: project**: path to the project directory, e.g. `/home/leej39/16S_QIIME2/test`
   - **all: mux_dir**: the direcotry containing multiplexed R1/R2 read pairs, e.g. `/home/leej39/16S_QIIME2/test/multiplexed_fastq` 
-  - **all: mapping**: the name of mapping file, e.g. `test_mapping_file.tsv` 
+  - **all: mapping**: the name of mapping file, e.g. `test_mapping_file.tsv`
+- To run the pipeline, execute e.g.
+```bash
+snakemake -j 100 \
+    --configfile path/to/config_test.yml \
+    --keep-going \
+    -w 90 \
+    --notemp \
+    -p 
+```
 - When submitting jobs using `qsub`, you may run e.g. `bash run_snakemake.bash path/to/config_test.yml`
   - `bash dryrun_snakemake.bash path/to/config_test.yml` for dryrun
   - `bash unlock_snakemake.bash path/to/config_test.yml` for unlocking

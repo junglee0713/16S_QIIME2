@@ -47,3 +47,4 @@ rsconnect/
 test/*
 !test/test_mapping_file.tsv
 !test/multiplexed_fastq/
+!test/QIIME_output/denoise_fwd_0-240_rev_0-240/core-metrics_sampling_depth_30/basic_bioinformatics_report

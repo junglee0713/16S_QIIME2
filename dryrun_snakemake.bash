@@ -8,13 +8,14 @@ fi
 
 CONFIG_FP=$1
 
-snakemake -j 100 \
+snakemake \
+    --jobs 100 \
     --configfile ${CONFIG_FP} \
     --cluster-config cluster.json \
     --keep-going \
-    -w 90 \
+    --latency-wait 90 \
     --notemp \
-    -p \
-    -c \
+    --printshellcmds \
+    --cluster \
     "qsub -cwd -r n -V -l h_vmem={cluster.h_vmem} -l mem_free={cluster.mem_free} -pe smp {threads}" \
-    -n
+    --dryrun

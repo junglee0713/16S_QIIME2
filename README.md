@@ -35,7 +35,7 @@ To run the pipeline, we need
   - **all: mapping**: the name of mapping file, e.g. `test_mapping_file.tsv`
 - To run the pipeline, activate the envrionment by entering `source activate qiime2-2019.7` and execute e.g.
 ```bash
-snakemake -j 100 \
+snakemake \
     --configfile path/to/config_test.yml \
     --keep-going \
     -w 90 \

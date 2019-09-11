@@ -250,7 +250,7 @@ s <- s1 %>%
 a <- simplify_assignments(adf, rank2 = "Family")
 summed_counts <- rowsum(counts, a)
 order_counts <- summed_counts[, s$SampleID]
-res <- getPrevalentTaxa(order_counts, least_prevalence = 0.001, top_taxa_n = 10)
+res <- getPrevalentTaxa(order_counts, least_prevalence = 0.001, top_taxa_n = 9)
 
 agg_counts <- res$aggregated_counts
 agg_props <- sweep(agg_counts, 2, colSums(agg_counts), "/") %>%
@@ -286,7 +286,7 @@ print(g)
 a <- simplify_assignments(adf, rank2 = "Genus")
 summed_counts <- rowsum(counts, a)
 order_counts <- summed_counts[, s$SampleID]
-res <- getPrevalentTaxa(order_counts, least_prevalence = 0.001, top_taxa_n = 10)
+res <- getPrevalentTaxa(order_counts, least_prevalence = 0.001, top_taxa_n = 9)
 
 agg_counts <- res$aggregated_counts
 agg_props <- sweep(agg_counts, 2, colSums(agg_counts), "/") %>%

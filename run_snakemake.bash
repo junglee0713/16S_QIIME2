@@ -8,8 +8,8 @@ fi
 
 CONFIG_FP=$1
 
-source ~/.bashrc
-conda activate qiime2-snakemake
+#source ~/.bashrc
+#conda activate qiime2-snakemake
 
 snakemake \
     --jobs 100 \

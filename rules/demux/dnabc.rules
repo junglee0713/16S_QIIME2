@@ -22,18 +22,33 @@ rule run_dnabc:
     params:
         demux_dir = PROJECT_DIR + "/demultiplexed_fastq",
         mismatch = config["demux"]["mismatch"]
+        revcomp = config["demux"]["revcomp"]
     output:
         manifest_fp = PROJECT_DIR + "/manifest.csv",
         total_reads_fp = PROJECT_DIR + "/total_read_counts.tsv",
         demux_fastq = expand(PROJECT_DIR + "/demultiplexed_fastq/{sample}_{direction}.fastq", sample = SAMPLE_IDS, direction = ["R1", "R2"])
-    shell:
-        """
-        mkdir -p {params.demux_dir}
-        touch {output.demux_fastq}
-        dnabc.py \
-        --output-dir {params.demux_dir} \
-        --mismatches {params.mismatch} \
-        --manifest-file {output.manifest_fp} \
-        --total-reads-file {output.total_reads_fp} \
-        {MAPPING_FP} {input.R1} {input.R2}
-        """
+    run:
+        if params.revcomp:
+            shell("""
+            mkdir -p {params.demux_dir}
+            touch {output.demux_fastq}
+            dnabc.py \
+            --revcomp \
+            --output-dir {params.demux_dir} \
+            --mismatches {params.mismatch} \
+            --manifest-file {output.manifest_fp} \
+            --total-reads-file {output.total_reads_fp} \
+            {MAPPING_FP} {input.R1} {input.R2}
+            """)
+        else:
+            shell("""
+            mkdir -p {params.demux_dir}
+            touch {output.demux_fastq}
+            dnabc.py \
+            --output-dir {params.demux_dir} \
+            --mismatches {params.mismatch} \
+            --manifest-file {output.manifest_fp} \
+            --total-reads-file {output.total_reads_fp} \
+            {MAPPING_FP} {input.R1} {input.R2}
+            """)
+

@@ -6,6 +6,7 @@ all:
 
 demux:
     mismatch: 0
+    revcomp: false
 
 denoise:
     trim_left_f: 0

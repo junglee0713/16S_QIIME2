@@ -21,7 +21,7 @@ rule run_dnabc:
         R2 = config["all"]["mux_dir"] + "/Undetermined_S0_L001_R2_001.fastq.gz"
     params:
         demux_dir = PROJECT_DIR + "/demultiplexed_fastq",
-        mismatch = config["demux"]["mismatch"]
+        mismatch = config["demux"]["mismatch"],
         revcomp = config["demux"]["revcomp"]
     output:
         manifest_fp = PROJECT_DIR + "/manifest.csv",

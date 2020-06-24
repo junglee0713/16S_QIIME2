@@ -49,5 +49,5 @@ test/demultiplexed_fastq
 test/demultiplexed_fastq_gz
 
 #cached python files
-scripts/__pycache*
+scripts/__pycache__/*
 

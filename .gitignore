@@ -52,3 +52,7 @@ test/demultiplexed_fastq_gz
 scripts/__pycache__/*
 
 .DS_Store
+test/QIIME_output/
+test/cluster_logs/
+test/manifest.csv
+test/total_read_counts.tsv

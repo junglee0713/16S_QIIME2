@@ -10,7 +10,7 @@ rdp_species <- snakemake@config[["dada2"]][["species_training_set"]]
 
 #from dada2.rules
 
-my_seqs <- readDNAStringSet(snakemake@input)
+my_seqs <- readDNAStringSet(snakemake@input[[1]])
 
 #main
 

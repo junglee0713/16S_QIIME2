@@ -1,7 +1,7 @@
 all:
-    project_dir: "/scr1/users/danielsg/unassigner_prj/16s_ubiomes/do_first/gut_PMID32461638/run_361"
-    mux_dir: "/scr1/users/danielsg/unassigner_prj/16s_ubiomes/do_first/gut_PMID32461638/run_361"
-    mapping: "361.txt"
+    project_dir: "/home/danielsg/16S_QIIME2/test"
+    mux_dir: "multiplexed_fastq"
+    mapping: "test_mapping_file.tsv"
     admin_email: "danielsg@email.chop.edu"
 
 #try revcomp if you are getting 0 reads when demultiplexing

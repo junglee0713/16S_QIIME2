@@ -20,6 +20,8 @@ TARGET_UNASSIGN = [str(DENOISE_DIR + "/representative_seq_fasta/unassigned/unass
 
 TARGET_REPORT = [str(CORE_METRIC_DIR + "/basic_bioinformatics_report/Basic_Bioinformatics_Report.html")]
 
+TARGET_DADA2SP = [str(DENOISE_DIR + "/representative_seq_fasta/dada2/dada2_species_assignments.tsv")]
+
 TARGET_ALL = (
     TARGET_DNABC +
     TARGET_QIIME_IMPORT +
@@ -30,5 +32,6 @@ TARGET_ALL = (
     TARGET_TREE +
     TARGET_DIVERSITY +
     TARGET_UNASSIGN +
-    TARGET_REPORT
+    TARGET_REPORT +
+    TARGET_DADA2SP
 )

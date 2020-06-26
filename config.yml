@@ -1,13 +1,11 @@
 all:
-    project_dir: "/scr1/users/danielsg/unassigner_prj/16s_ubiomes/do_first/gut_PMID32461638/run_361"    
+    project_dir: "/scr1/users/danielsg/unassigner_prj/16s_ubiomes/do_first/gut_PMID32461638/run_361"
     mux_dir: "/scr1/users/danielsg/unassigner_prj/16s_ubiomes/do_first/gut_PMID32461638/run_361"
     mapping: "361.txt"
     admin_email: "danielsg@email.chop.edu"
 
 #try revcomp if you are getting 0 reads when demultiplexing
-#TODO: figure out how to make revcomp added to dnabc.py command if its true here
 demux:
-#    revcomp: True
     mismatch: 0
     revcomp: false
 
@@ -19,7 +17,7 @@ denoise:
     n_threads: 6
 
 taxonomy:
-    classifier_fp: "/home/danielsg/16S_QIIME2/QIIME2_data/gg-13-8-99-nb-classifier.qza"            
+    classifier_fp: "/home/danielsg/16S_QIIME2/QIIME2_data/gg-13-8-99-nb-classifier.qza"
 
 diversity:
     sampling_depth: 30
@@ -36,3 +34,4 @@ report:
 
 dada2:
     rscript: "/home/danielsg/16S_QIIME2/scripts/dada2.R"
+    species_training_set: "/home/danielsg/16S_QIIME2/dada2_data/rdp_species_assignment_16.fa.gz"

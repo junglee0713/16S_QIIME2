@@ -4,8 +4,6 @@ rule all_dada2_species:
 
 rule dada2_assignSpecies:
     input: DENOISE_DIR + "/representative_seq_fasta/dna-sequences.fasta"
-    params: config["dada2"]["training_set"],
-            config["dada2"]["species_training_set"]
-    output: DADA2_DIR + "/dada2_assigned_species.fasta"
+    output: DENOISE_DIR + "/representative_seq_fasta/dada2/dada2_species_assignments.tsv"
     script:
         str(config["dada2"]["rscript"]

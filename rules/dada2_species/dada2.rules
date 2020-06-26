@@ -8,4 +8,4 @@ rule dada2_assignSpecies:
     output:
         DENOISE_DIR + "/representative_seq_fasta/dada2/dada2_species_assignments.tsv"
     script:
-        str(config["dada2"]["rscript"]
+        str(config["dada2"]["rscript"])

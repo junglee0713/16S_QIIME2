@@ -56,3 +56,4 @@ test/QIIME_output/
 test/cluster_logs/
 test/manifest.csv
 test/total_read_counts.tsv
+test/report.RData

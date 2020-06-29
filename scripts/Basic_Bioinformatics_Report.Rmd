@@ -422,3 +422,10 @@ ReadCounts <- s1 %>% select(SampleID, demux_Read_Counts, denoise_Read_Counts, QC
   arrange(QC_Read_Counts)
 datatable(ReadCounts, fillContainer = FALSE, options = list(pageLength = 10))
 ```
+
+```{r save environment}
+
+save.image(file = snakemake@output[["report_rdata"]])
+
+```
+

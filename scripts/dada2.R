@@ -17,6 +17,8 @@ my_seqs <- readDNAStringSet(snakemake@input[[1]])
 seqs_df <- tibble(query_id = names(my_seqs),
                   sequence = as.character(my_seqs))
 
+set.seed(100) # Initialize random number generator for reproducibility
+
 genus.species <- assignSpecies(seqs_df$sequence, rdp_species)
 
 genspec_df <- genus.species %>%
@@ -28,4 +30,6 @@ genspec_df <- genus.species %>%
 
 #from dada2.rules and targets.rules
 
-write_tsv(x = genspec_df, path = snakemake@output[[1]])
+save.image(file = snakemake@output[["dada2_rdata"]])
+
+write_tsv(x = genspec_df, path = snakemake@output[["dada2_output"]])

@@ -6,7 +6,7 @@ rule dada2_assignSpecies:
     input:
         DENOISE_DIR + "/representative_seq_fasta/dna-sequences.fasta"
     output:
-        dada2_output = DENOISE_DIR + "/representative_seq_fasta/dada2/dada2_species_assignments.tsv"
+        dada2_output = DENOISE_DIR + "/representative_seq_fasta/dada2/dada2_species_assignments.tsv",
         dada2_rdata = DENOISE_DIR + "/representative_seq_fasta/dada2/dada2.RData"
     script:
         str(config["dada2"]["rscript"])

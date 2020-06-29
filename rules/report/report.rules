@@ -12,7 +12,7 @@ rule generate_report:
         uu_fp = CORE_METRIC_DIR + "/uu.tsv",
         wu_fp = CORE_METRIC_DIR + "/wu.tsv"
     output:
-        report_html = CORE_METRIC_DIR + "/basic_bioinformatics_report/Basic_Bioinformatics_Report.html"
+        report_html = CORE_METRIC_DIR + "/basic_bioinformatics_report/Basic_Bioinformatics_Report.html",
         report_rdata = CORE_METRIC_DIR + "/basic_bioinformatics_report/report.RData"
     script:
         str(config["report"]["rmd"])

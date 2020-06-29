@@ -1,4 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+#$ -cwd
+#$ -r n
+#$ -V
+#$ -l h_vmem=2G
+#$ -j y
+
+#Uncomment the next two lines if you want to 'qsub' this script
+#source ~/.bashrc #needed to make "conda" command to work
+#conda activate qiime2-snakemake
+
 set -xeuo pipefail
 
 if [ $# -ne 1 ]; then

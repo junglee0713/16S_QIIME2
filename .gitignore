@@ -51,3 +51,5 @@ test/demultiplexed_fastq_gz
 #cached python files
 scripts/__pycache__/*
 
+config_361.yml
+config_499.yml

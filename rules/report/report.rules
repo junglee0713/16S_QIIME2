@@ -6,7 +6,7 @@ rule generate_report:
     input:
         mapping_fp = MAPPING_FP,
         demux_count_fp = QIIME_OUTPUT_DIR + "/demux_stat/per-sample-fastq-counts.csv",
-        feature_table_fp = DENOISE_DIR + "/feature_table/feature-table.tsv", 
+        feature_table_fp = DENOISE_DIR + "/feature_table/feature-table.tsv",
         taxo_assignment_fp = DENOISE_DIR + "/taxonomy/taxonomy.tsv",
         faith_fp = CORE_METRIC_DIR + "/faith_pd.tsv",
         uu_fp = CORE_METRIC_DIR + "/uu.tsv",
@@ -14,5 +14,5 @@ rule generate_report:
     output:
         CORE_METRIC_DIR + "/basic_bioinformatics_report/Basic_Bioinformatics_Report.html"
     script:
-        str(config["report"]["rmd"]) 
+        str(config["report"]["rmd"])
 

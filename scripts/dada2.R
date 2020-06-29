@@ -14,7 +14,7 @@ my_seqs <- readDNAStringSet(snakemake@input[[1]])
 
 #main
 
-seqs_df <- tibble(OTU_ID = names(my_seqs),
+seqs_df <- tibble(query_id = names(my_seqs),
                   sequence = as.character(my_seqs))
 
 genus.species <- assignSpecies(seqs_df$sequence, rdp_species)
@@ -23,8 +23,9 @@ genspec_df <- genus.species %>%
     as.data.frame() %>%
     rownames_to_column(var = "sequence") %>%
     inner_join(seqs_df, by = "sequence") %>%
-    select(OTU_ID, Genus, Species)
+    mutate(species = paste0(Genus, " ", Species)) %>% #making same as unassigner output
+    select(query_id, species, sequence)
 
 #from dada2.rules and targets.rules
 
-write_tsv(x = genspec_df, path = snakemake@output)
+write_tsv(x = genspec_df, path = snakemake@output[[1]])

@@ -425,7 +425,7 @@ datatable(ReadCounts, fillContainer = FALSE, options = list(pageLength = 10))
 
 ```{r save environment}
 
-save.image(file = snakemake@output[["report_rdata"]])
+save.image(file = snakemake@config[["report"]][["report_rdata"]])
 
 ```
 

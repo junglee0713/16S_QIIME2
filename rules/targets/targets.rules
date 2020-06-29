@@ -18,8 +18,7 @@ TARGET_DIVERSITY = [str(CORE_METRIC_DIR + "/faith_pd.tsv"),
 
 TARGET_UNASSIGN = [str(DENOISE_DIR + "/representative_seq_fasta/unassigned/unassigner_output.tsv")]
 
-TARGET_REPORT = [str(CORE_METRIC_DIR + "/basic_bioinformatics_report/Basic_Bioinformatics_Report.html"),
-                 str(CORE_METRIC_DIR + "/basic_bioinformatics_report/report.RData")]
+TARGET_REPORT = [str(CORE_METRIC_DIR + "/basic_bioinformatics_report/Basic_Bioinformatics_Report.html")]
 
 TARGET_DADA2SP = [str(DENOISE_DIR + "/representative_seq_fasta/dada2/dada2_species_assignments.tsv"),
                   str(DENOISE_DIR + "/representative_seq_fasta/dada2/dada2.RData")]

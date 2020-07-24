@@ -7,8 +7,8 @@ rule run_vsearch:
         query = DENOISE_DIR + "/representative_seq_fasta/dna-sequences.fasta",
         db = config["sbx_vsearch"]["db"]
     output:
-        reports = DENOISE_DIR + "/representative_seq_fasta/vsearch/vsearch_report.tsv"),
-        alignments = DENOISE_DIR + "/representative_seq_fasta/vsearch/vsearch.fasta")
+        reports = DENOISE_DIR + "/representative_seq_fasta/vsearch/vsearch_report.tsv",
+        alignments = DENOISE_DIR + "/representative_seq_fasta/vsearch/vsearch.fasta"
     threads:
         config["vsearch"]["threads"]
     params:

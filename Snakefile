@@ -31,6 +31,7 @@ include: "rules/diversity/diversity.rules"
 include: "rules/unassign/unassign.rules"
 include: "rules/report/report.rules"
 include: "rules/dada2_species/dada2.rules"
+include: "rules/vsearch/vsearch.rules"
 
 workdir: PROJECT_DIR
 

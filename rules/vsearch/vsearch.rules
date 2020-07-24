@@ -1,0 +1,34 @@
+rule all_vsearch:
+    input:
+        TARGET_VSEARCH
+
+rule run_vsearch:
+    input:
+        query = DENOISE_DIR + "/representative_seq_fasta/dna-sequences.fasta",
+        db = config["sbx_vsearch"]["db"]
+    output:
+        reports = DENOISE_DIR + "/representative_seq_fasta/vsearch/vsearch_report.tsv"),
+        alignments = DENOISE_DIR + "/representative_seq_fasta/vsearch/vsearch.fasta")
+    threads:
+        config["vsearch"]["threads"]
+    params:
+        iddef = config["vsearch"]["iddef"],
+        min_id = config["vsearch"]["min_id"],
+        userfields = config["vsearch"]["userfields"],
+        weak_id = config["vsearch"]["weak_id"],
+        fasta_width = config["vsearch"]["fasta_width"],
+        maxaccepts = config["vsearch"]["maxaccepts"]
+    shell:
+        """
+            vsearch --usearch_global {input.query} \
+            --db {input.db} \
+            --userout {output.reports} \
+            --matched {output.alignments} \
+            --threads {threads} \
+            --iddef {params.iddef} \
+            --id {params.min_id} \
+            --userfields {params.userfields} \
+            --weak_id {params.weak_id} \
+            --fasta_width {params.fasta_width} \
+            --maxaccepts {params.maxaccepts}
+        """

@@ -101,6 +101,20 @@ snakemake \
 #### Output
 - Unassigner output (tsv) for species level classification of representative sequences
 
+### dada2_species
+#### Input
+- Representative sequences (fasta)
+#### Output
+- Dada2 species assignments (tsv)
+- Dada2 Raw data for loading in R (RData format)
+
+### vsearch
+#### Input
+- Representative sequences (fasta)
+#### Output
+- Vsearch report (tsv) customized to be like BLAST results (see config.yml)
+- Vsearch list of representative sequences that aligned (fasta)
+
 ### Basic Bioinformatics Report
 #### Input
 - QIIME2 compatible mapping file and output from diversity calculation 

@@ -18,7 +18,9 @@ DENOISE_DIR = (QIIME_OUTPUT_DIR + "/denoise" +
                 "_rev_" + str(trim_left_r) + "-" + str(trunc_len_r)
                     )
 CORE_METRIC_DIR = (DENOISE_DIR + "/core-metrics" +
-                    "_sampling_depth_" + str(config["diversity"]["sampling_depth"]))
+		  "_sampling_depth_" + str(config["diversity"]["sampling_depth"]))
+
+CORE_METRIC_UNRAREFIED_DIR = (DENOISE_DIR + "/core-metrics-unrarefied")
 
 include: "rules/targets/targets.rules"
 include: "rules/demux/dnabc.rules"

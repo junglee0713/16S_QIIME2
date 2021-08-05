@@ -114,9 +114,3 @@ snakemake \
 #### Output
 - Vsearch report (tsv) customized to be like BLAST results (see config.yml)
 - Vsearch list of representative sequences that aligned (fasta)
-
-### Basic Bioinformatics Report
-#### Input
-- QIIME2 compatible mapping file and output from diversity calculation 
-#### Output
-- Basic Bioinformatics Report containging heatmap, relative proportion bar graph, alpha diversity plots, beta diversity plots, and per sample read counts in HTML format.

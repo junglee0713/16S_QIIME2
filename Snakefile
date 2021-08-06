@@ -13,10 +13,8 @@ trunc_len_f = config["denoise"]["trunc_len_f"]
 trim_left_r = config["denoise"]["trim_left_r"]
 trunc_len_r = config["denoise"]["trunc_len_r"]
 
-DENOISE_DIR = (QIIME_OUTPUT_DIR + "/denoise" +
-                "_fwd_" + str(trim_left_f) + "-" + str(trunc_len_f) +
-                "_rev_" + str(trim_left_r) + "-" + str(trunc_len_r)
-                    )
+DENOISE_DIR = (QIIME_OUTPUT_DIR + "/denoise-results")
+
 CORE_METRIC_DIR = (DENOISE_DIR + "/core-metrics" +
 		  "_sampling_depth_" + str(config["diversity"]["sampling_depth"]))
 

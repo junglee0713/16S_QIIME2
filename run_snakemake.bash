@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 
-#$ -cwd
-#$ -r n
-#$ -V
-#$ -l h_vmem=2G
-#$ -j y
+#SBATCH --mem=2G
+#SBATCH -n 1
+#SBATCH --export=ALL
+#SBATCH --mail-user=tanesc@chop.edu
+#SBATCH --mail-type=END,FAIL
+#SBATCH --no-requeue
+#SBATCH -t 12:00:00
+#SBATCH --output=slurm_%x_%j.out
 
 #Uncomment the next two lines if you want to 'qsub' this script
-source ~/.bashrc #needed to make "conda" command to work
-conda activate qiime2-snakemake
+#source ~/.bashrc #needed to make "conda" command to work
+#conda activate qiime2-snakemake
 
 set -xeuo pipefail
 
@@ -28,4 +31,4 @@ snakemake \
     --notemp \
     --printshellcmds \
     --cluster \
-    "qsub -cwd -r n -V -l h_vmem={cluster.h_vmem} -l mem_free={cluster.mem_free} -pe smp {threads}"
+    "sbatch --mem=10G -t 12:00:00 -n 4 --export=ALL --no-requeue"

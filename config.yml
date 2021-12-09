@@ -20,18 +20,10 @@ taxonomy:
     classifier_fp: "/home/danielsg/16S_QIIME2/QIIME2_data/gg-13-8-99-nb-classifier.qza"
 
 diversity:
-    sampling_depth: 30
+    sampling_depth: 1000
 
 unassign:
     unassigner_species_fp: "/home/danielsg/16S_QIIME2/unassign_data/unassigner_species.fasta"
-
-report:
-    study_group_var: "investigator"
-    min_reads: 5
-    richness_subsample_size: 20
-    rmd: "/home/danielsg/16S_QIIME2/scripts/Basic_Bioinformatics_Report.Rmd"
-    R_helper: "/home/danielsg/16S_QIIME2/scripts/helper_functions.R"
-    report_rdata: "/home/danielsg/16S_QIIME2/test/report.RData" # rmd can only have one output so have to put this here
 
 dada2:
     rscript: "/home/danielsg/16S_QIIME2/scripts/dada2.R"

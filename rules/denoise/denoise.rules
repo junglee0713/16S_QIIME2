@@ -46,7 +46,7 @@ rule run_dada2:
     params:
         n_threads = config["denoise"]["n_threads"]
     output:
-        feature_table = DENOISE_DIR + "/table.qza",
+        feature_table = DENOISE_DIR + "/table_main.qza",
         rep_seq = DENOISE_DIR + "/representative-seqs.qza",
         stat = DENOISE_DIR + "/denoise_stats.qza"
     shell:
@@ -62,3 +62,16 @@ rule run_dada2:
         --o-representative-sequences {output.rep_seq} \
         --o-denoising-stats {output.stat}
         """ 
+
+rule filter_empty:
+    input:
+        DENOISE_DIR + "/table_main.qza"
+    output:
+        DENOISE_DIR + "/table.qza"
+    shell:
+        """
+        qiime feature-table filter-samples \
+        --i-table {input} \
+        --p-min-frequency 1 \
+        --o-filtered-table "{output}"
+        """

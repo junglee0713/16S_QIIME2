@@ -31,4 +31,4 @@ snakemake \
     --notemp \
     --printshellcmds \
     --cluster \
-    "sbatch --mem=10G -t 12:00:00 -n 4 --export=ALL --no-requeue"
+    "sbatch --mem=32G -t 24:00:00 -n 4 --export=ALL --no-requeue"

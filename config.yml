@@ -17,7 +17,7 @@ denoise:
     n_threads: 6
 
 taxonomy:
-    classifier_fp: "/home/danielsg/16S_QIIME2/QIIME2_data/gg-13-8-99-nb-classifier.qza"
+    classifier_fp: "/mnt/isilon/microbiome/analysis/biodata/silva/silva_132/silva-132-99-nb-classifier.qza"
 
 diversity:
     sampling_depth: 1000

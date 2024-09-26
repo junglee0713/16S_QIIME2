@@ -134,3 +134,129 @@ rule get_diversity:
         --o-bray-curtis-emperor {output.bc_emperor} 
         """
 
+rule get_uu_unrarefied:
+     input:
+         rooted_tree = DENOISE_DIR + "/rooted-tree.qza",
+         table = DENOISE_DIR + "/table.qza"
+     output:
+         CORE_METRIC_UNRAREFIED_DIR + "/unweighted_unifrac_distance_matrix.qza"
+     shell:
+         """
+         qiime diversity beta-phylogenetic \
+      	 --i-phylogeny {input.rooted_tree} \
+      	 --i-table {input.table} \
+      	 --p-metric unweighted_unifrac \
+      	 --o-distance-matrix {output}
+         """
+	 
+rule move_uu_unrarefied:
+    input:
+        CORE_METRIC_UNRAREFIED_DIR + "/uu/distance-matrix.tsv"
+    params:
+        CORE_METRIC_UNRAREFIED_DIR + "/uu"
+    output:
+        CORE_METRIC_UNRAREFIED_DIR + "/uu_unrarefied.tsv"
+    shell:
+        """
+        mv {input} {output}
+        rmdir {params}
+        """
+	
+rule uu_convert_unrarefied:
+    input:
+        CORE_METRIC_UNRAREFIED_DIR + "/unweighted_unifrac_distance_matrix.qza"
+    params:
+        CORE_METRIC_UNRAREFIED_DIR + "/uu"
+    output:
+        CORE_METRIC_UNRAREFIED_DIR + "/uu/distance-matrix.tsv"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """
+
+rule get_wu_unrarefied:
+     input:
+         rooted_tree = DENOISE_DIR + "/rooted-tree.qza",
+         table = DENOISE_DIR + "/table.qza"
+     output:
+         CORE_METRIC_UNRAREFIED_DIR + "/weighted_unifrac_distance_matrix.qza"
+     shell:
+         """
+         qiime diversity beta-phylogenetic \
+         --i-phylogeny  {input.rooted_tree} \
+      	 --i-table {input.table} \
+      	 --p-metric weighted_unifrac \
+      	 --o-distance-matrix {output}
+         """
+
+rule move_wu_unrarefied:
+    input:
+        CORE_METRIC_UNRAREFIED_DIR + "/wu/distance-matrix.tsv"
+    params:
+        CORE_METRIC_UNRAREFIED_DIR + "/wu"
+    output:
+        CORE_METRIC_UNRAREFIED_DIR + "/wu_unrarefied.tsv"
+    shell:
+        """
+        mv {input} {output}
+        rmdir {params}
+        """
+
+rule wu_convert_unrarefied:
+    input:
+        CORE_METRIC_UNRAREFIED_DIR + "/weighted_unifrac_distance_matrix.qza"
+    params:
+        CORE_METRIC_UNRAREFIED_DIR + "/wu"
+    output:
+        CORE_METRIC_UNRAREFIED_DIR + "/wu/distance-matrix.tsv"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """
+
+
+rule get_faith_unrarefied:
+     input:
+         rooted_tree = DENOISE_DIR + "/rooted-tree.qza",
+         table = DENOISE_DIR + "/table.qza"
+     output:
+         CORE_METRIC_UNRAREFIED_DIR + "/faith_pd_vector.qza"
+     shell:
+         """
+         qiime diversity alpha-phylogenetic \
+      	 --i-phylogeny  {input.rooted_tree} \
+      	 --i-table {input.table} \
+      	 --p-metric faith_pd \
+      	 --o-alpha-diversity {output}
+         """
+
+rule move_faith_unrarefied:
+    input:
+        CORE_METRIC_UNRAREFIED_DIR + "/faith/alpha-diversity.tsv"
+    params:
+        CORE_METRIC_UNRAREFIED_DIR + "/faith"
+    output:
+        CORE_METRIC_UNRAREFIED_DIR + "/faith_pd_unrarefied.tsv"
+    shell:
+        """
+        mv {input} {output}
+        rmdir {params}
+        """
+
+rule faith_convert_unrarefied:
+    input:
+        CORE_METRIC_UNRAREFIED_DIR + "/faith_pd_vector.qza"
+    params:
+        CORE_METRIC_UNRAREFIED_DIR + "/faith"
+    output:
+        CORE_METRIC_UNRAREFIED_DIR + "/faith/alpha-diversity.tsv"
+    shell:
+        """
+        qiime tools export \
+        --input-path {input} \
+        --output-path {params}
+        """

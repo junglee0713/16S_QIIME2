@@ -3,22 +3,22 @@ This is a Snakemake based 16S QIIME2 pipeline.
 
 ## Installation
 To install, we assume you already have installed `Miniconda3 (4.7.10+)` (https://docs.conda.io/en/latest/miniconda.html)
-- Clone the repository:
+- Clone this repository:
 ```bash
-git clone https://github.com/junglee0713/16S_QIIME2.git
+git clone https://github.com/PennChopMicrobiomeProgram/16S_QIIME2.git
 ```
 - Create a conda environment:
 ```bash
 cd 16S_QIIME2
 conda env create -f environment.yml
 ```
-- The following software also need to be installed:
-  - `dnabc` (https://github.com/PennChopMicrobiomeProgram/dnabc)
-  - `unassigner` (https://github.com/kylebittinger/unassigner)
 
 To run the pipeline, activate the envrionment (currently based on **QIIME2 2019.7**) by entering
 `source activate qiime2-2019.7`
-(Make sure to install `dnabc` and `unassigner` in the `qiime2-2019.7` envrionment)
+
+- The following software also need to be installed within the environment you created:
+  - `dnabc` (https://github.com/PennChopMicrobiomeProgram/dnabc)
+  - `unassigner` (https://github.com/kylebittinger/unassigner)
 
 ## Required input files for the pipeline
 To run the pipeline, we need
@@ -28,10 +28,10 @@ To run the pipeline, we need
   - The first two columns should be `SampleID` (or `#SampleID`) and `BarcodeSequence`
 
 ## How to run
-- Create a project directory, e.g. `/home/leej39/16S_QIIME2/test` and put the mapping file, e.g. `test_mapping_file.tsv` in the project directory
+- Create a project directory, e.g. `~/16S_QIIME2/test` and put the mapping file, e.g. `test_mapping_file.tsv` in the project directory. If you are running this on the cluster, the data would be staged in a scratch drive e.g. `/scr1/username`
 - Edit `config.yml` so that it suits your project. In particular,
-  - **all: project**: path to the project directory, e.g. `/home/leej39/16S_QIIME2/test`
-  - **all: mux_dir**: the direcotry containing multiplexed R1/R2 read pairs, e.g. `/home/leej39/16S_QIIME2/test/multiplexed_fastq` 
+  - **all: project**: path to the project directory, e.g. `~/16S_QIIME2/test`
+  - **all: mux_dir**: the direcotry containing multiplexed R1/R2 read pairs, e.g. `~/16S_QIIME2/test/multiplexed_fastq` 
   - **all: mapping**: the name of mapping file, e.g. `test_mapping_file.tsv`
 - To run the pipeline, activate the envrionment by entering `source activate qiime2-2019.7`, `cd` into `16S_QIIME2` and execute e.g.
 ```bash
@@ -42,7 +42,7 @@ snakemake \
     --notemp \
     --printshellcmds
 ```
-- When submitting jobs using `qsub`, you may run e.g. `bash run_snakemake.bash path/to/config_test.yml`
+- When submitting jobs using `sbatch`, you may run e.g. `bash run_snakemake.bash path/to/config_test.yml`
   - `bash dryrun_snakemake.bash path/to/config_test.yml` for dryrun
   - `bash unlock_snakemake.bash path/to/config_test.yml` for unlocking
   
@@ -114,9 +114,3 @@ snakemake \
 #### Output
 - Vsearch report (tsv) customized to be like BLAST results (see config.yml)
 - Vsearch list of representative sequences that aligned (fasta)
-
-### Basic Bioinformatics Report
-#### Input
-- QIIME2 compatible mapping file and output from diversity calculation 
-#### Output
-- Basic Bioinformatics Report containging heatmap, relative proportion bar graph, alpha diversity plots, beta diversity plots, and per sample read counts in HTML format.
